@@ -1,5 +1,5 @@
 baseURL = "https://saasify-demo.chaoming.li/"
-title = "Saasify"
+title = "Cinturon360"
 defaultContentLanguage = "en"
 
 # Theme Config
@@ -23,10 +23,13 @@ path = "page"
 
 [params]
 description = ""
-author = "Chaoming Li"
+author = "RePass Cloud"
 logo = "/images/logo.svg"
 # Google Analytics ID (e.g., "G-XXXXXXXXXX")
 # googleAnalytics = "G-XXXXXXXXXX"
+title2 = "Cinturon360.com"
+title2a = "Cinturon"
+title2b = "360"
 
 # Global CTA Configuration
 [params.cta]
@@ -45,19 +48,19 @@ url = "/demo"
 
 # Social Media Links
 [params.social]
-linkedin = "https://linkedin.com/in/chaomingli"
-twitter = "https://twitter.com/lichaoming"
-bluesky = "https://bsky.app/profile/bsky.app"
-youtube = "https://youtube.com/@chaomingli"
-facebook = "https://facebook.com/lichaoming"
-instagram = "https://instagram.com/lichaoming"
-github = "https://github.com/chaoming"
-telegram = "https://t.me/yourchannel"
-discord = "https://discord.gg/yourinvite"
-slack = "https://yourteam.slack.com"
-medium = "https://medium.com/@yourhandle"
-dribbble = "https://dribbble.com/yourprofile"
-behance = "https://behance.net/yourprofile"
+linkedin = "https://linkedin.com/in/repasscloud"
+twitter = "https://twitter.com/repasscloud"
+# bluesky = "https://bsky.app/profile/repasscloud"
+# youtube = "https://youtube.com/@repasscloud"
+# facebook = "https://facebook.com/repasscloud"
+# instagram = "https://instagram.com/repasscloud"
+github = "https://github.com/repasscloud"
+# telegram = "https://t.me/yourchannel"
+# discord = "https://discord.gg/yourinvite"
+# slack = "https://yourteam.slack.com"
+# medium = "https://medium.com/@yourhandle"
+# dribbble = "https://dribbble.com/yourprofile"
+# behance = "https://behance.net/yourprofile"
 
 # Footer Configuration
 [params.footer]
