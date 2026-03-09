@@ -5695,6 +5695,10 @@ input:where([type='file']):focus {
 }
 @media (min-width: 768px) {
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }

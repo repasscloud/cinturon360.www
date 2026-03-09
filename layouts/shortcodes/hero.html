@@ -2,6 +2,7 @@
 {{ $headline2 := .Get "headline2" }}
 {{ $headline3 := .Get "headline3" }}
 {{ $sub_headline := .Get "sub_headline" }}
+{{ $supporting_text := .Get "supporting_text" }}
 {{ $primary_button_text := .Get "primary_button_text" }}
 {{ $primary_button_url := .Get "primary_button_url" }}
 {{ $secondary_button_text := .Get "secondary_button_text" }}
@@ -13,7 +14,7 @@
 
 {{ $hero_background := "background: radial-gradient(circle at top, #38bdf833, #0f172a 55%);" }}
 {{ if $gradient_from }}
-  {{ $hero_background = printf "background: radial-gradient(circle at top, %s, %s 55%%);" $gradient_from $gradient_to }}
+  {{ $hero_background = printf "background: radial-gradient(circle at top, %s, %s 25%%);" $gradient_from $gradient_to }}
 {{ end }}
 
 <section class="c360-hero relative overflow-hidden text-white" style="{{ $hero_background }}">
@@ -52,6 +53,11 @@
                     </a>
                     {{ end }}
                 </div>
+                {{ if $supporting_text }}
+                <p class="hidden md:block text-sm c360-muted-text">
+                    {{ $supporting_text | safeHTML }}
+                </p>
+                {{ end }}
             </div>
 
             <div class="relative">
