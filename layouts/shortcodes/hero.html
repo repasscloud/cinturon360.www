@@ -8,15 +8,15 @@
 {{ $secondary_button_text := .Get "secondary_button_text" }}
 {{ $secondary_button_url := .Get "secondary_button_url" }}
 {{ $background_image := .Get "background_image" }}
-{{ $gradient_from := .Get "gradient-from" }}
-{{ $gradient_to := .Get "gradient-to" | default "#0f172a" }}
 
-{{ $hero_background := "background: radial-gradient(circle at top, #38bdf833, #0f172a 55%);" }}
-{{ if $gradient_from }}
-  {{ $hero_background = printf "background: radial-gradient(circle at top, %s, %s 55%%);" $gradient_from $gradient_to }}
-{{ end }}
+{{ $gradient_from := .Get "gradient-from" | default .Site.Params.cta.gradient_from | default "#38bdf833" }}
+{{ $gradient_to := .Get "gradient-to" | default .Site.Params.cta.gradient_to | default "#0f172a" }}
+{{ $gradient_angle := .Get "gradient-angle" | default .Site.Params.cta.gradient_angle | default 30 }}
 
-<section class="c360-hero relative overflow-hidden text-white" style="{{ $hero_background }}">
+<section
+    class="relative overflow-hidden text-white"
+    style="background-color: {{ $gradient_to }}; background-image: linear-gradient({{ $gradient_angle }}deg, {{ $gradient_from }}, {{ $gradient_to }});"
+>
     {{ if $background_image }}
     <div class="absolute inset-0">
         <img src="{{ $background_image | relURL }}" alt="Background" class="w-full h-full object-cover">
@@ -54,7 +54,7 @@
                 </div>
 
                 {{ if $supporting_text }}
-                <p class="hidden lg:block text-sm c360-muted-text">
+                <p class="hidden lg:block text-sm text-white">
                     {{ $supporting_text | safeHTML }}
                 </p>
                 {{ end }}
