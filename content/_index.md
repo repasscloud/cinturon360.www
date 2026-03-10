@@ -1,16 +1,16 @@
 ---
 title: Home
 client_logos:
-  - name: "Customer 1"
-    logo: "/images/logos/customer-1.png"
-  - name: "Customer 2"
-    logo: "/images/logos/customer-2.png"
-  - name: "Customer 3"
-    logo: "/images/logos/customer-3.png"
-  - name: "Customer 4"
-    logo: "/images/logos/customer-4.png"
-  - name: "Customer 5"
-    logo: "/images/logos/customer-5.png"
+  - name: "Amadeus"
+    logo: "/images/logos/amadeus.svg"
+  - name: "Travelport"
+    logo: "/images/logos/travelport.svg"
+  - name: "Sabre"
+    logo: "/images/logos/sabre.svg"
+  - name: "Duffel"
+    logo: "/images/logos/duffel.svg"
+  - name: "AirGateway"
+    logo: "/images/logos/airgateway.svg"
 testimonials:
   - name: "John Smith"
     title: "CTO at TechStartup"
@@ -47,19 +47,18 @@ testimonials:
     description="Cinturon360 connects to existing booking channels, applies policy and approval workflows, and gives finance and operations teams a single view of spend, exceptions, and audit."
 >}}
 
-{{< feature
+{{< feature-governance
     title="Policy and approval workflows"
     description="Route bookings to the right approvers before spend is committed. Apply rules by entity, team, traveller, cost centre, destination, supplier, fare cap, or exception path."
     badge="Governance"
-    badgeColor="#38bdf8"
-    image="/images/feature-1.svg"
+    badgeColor="#0f172a"
     buttonText="Learn More"
     buttonLink="/platform/governance/"
     features="Pre-trip approvals,Cost-centre routing,Out-of-policy handling,Full audit trail"
     imagePosition="right"
 >}}
 
-{{< feature
+{{< feature-integration
     title="Works with your existing booking ecosystem"
     description="Cinturon360 is not a rip-and-replace online booking tool. It wraps around your current channels and suppliers so you can govern bookings made through TMCs, GDS/NDC, direct suppliers, and other connected sources."
     badge="Integrations"
@@ -71,11 +70,11 @@ testimonials:
     imagePosition="left"
 >}}
 
-{{< feature
+{{< feature-reporting
     title="Finance-grade reporting and visibility"
     description="Give travel, finance, procurement, and leadership teams a clear picture of spend, compliance, exceptions, and operational activity across the organisation."
     badge="Reporting"
-    badgeColor="#16a34a"
+    badgeColor="#0f172a"
     image="/images/feature-3.svg"
     buttonText="See Reporting"
     buttonLink="/platform/reporting/"

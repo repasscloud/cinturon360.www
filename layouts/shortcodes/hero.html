@@ -9,13 +9,18 @@
 {{ $secondary_button_url := .Get "secondary_button_url" }}
 {{ $background_image := .Get "background_image" }}
 
-{{ $gradient_from := .Get "gradient-from" | default .Site.Params.cta.gradient_from | default "#38bdf8" }}
+{{ $gradient_from := .Get "gradient-from" | default .Site.Params.cta.gradient_from | default "#38bdf833" }}
 {{ $gradient_to := .Get "gradient-to" | default .Site.Params.cta.gradient_to | default "#0f172a" }}
 {{ $gradient_angle := .Get "gradient-angle" | default .Site.Params.cta.gradient_angle | default 30 }}
 
 <section
     class="relative overflow-hidden text-white"
-    style="background-color: {{ $gradient_to }}; background-image: linear-gradient({{ $gradient_angle }}deg, {{ $gradient_from }}, {{ $gradient_to }});"
+    style="
+        background-color: {{ $gradient_to }};
+        background-image:
+            linear-gradient({{ $gradient_angle }}deg, {{ $gradient_from }}, transparent 45%),
+            linear-gradient(135deg, #0284c7, {{ $gradient_to }});
+    "
 >
     {{ if $background_image }}
     <div class="absolute inset-0">
@@ -35,7 +40,7 @@
                     {{ end }}
                 </h1>
 
-                <p class="text-xl leading-relaxed c360-muted-text">
+                <p class="text-xl leading-relaxed text-white">
                     {{ $sub_headline | safeHTML }}
                 </p>
 

@@ -34,17 +34,19 @@ title2b = "360"
 # Global CTA Configuration
 [params.cta]
 enable = true
-title = "Ready to Build Your SaaS Website?"
-description = "Join companies already using our theme to create beautiful, high-performance websites."
+title = "<span style='color: var(--c360-primary);'>Cinturon</span><span style='color: var(--c360-accent);'>360</span> is coming soon"
+description = "Cinturon360 is an upcoming travel governance and visibility platform designed to work with existing booking channels, apply policy and approvals, and deliver finance-grade reporting. Join the waitlist to follow the launch."
 gradient_from = "#38bdf833"
 gradient_to = "#0f172a"
 gradient_angle = 30
+
 [params.cta.primary_button]
-text = "Get Started Free"
-url = "/get-started"
+text = "Join Waitlist"
+url = "/waitlist"
+
 [params.cta.secondary_button]
-text = "Book Demo"
-url = "/demo"
+text = "See Preview"
+url = "/preview"
 
 # Social Media Links
 [params.social]
@@ -64,7 +66,7 @@ github = "https://github.com/repasscloud"
 
 # Footer Configuration
 [params.footer]
-column_1_title = "Features"
+column_1_title = "PLATFORM"
 column_2_title = "COMPANY"
 column_3_title = "LEGAL"
 
@@ -195,68 +197,69 @@ startLevel = 2
 
 # Navigation Menu
 [menu]
+
 [[menu.main]]
-name = "Features"
+name = "Platform"
 weight = 1
 [menu.main.params]
 has_submenu = true
 submenu = [
-  { name = "Performance", url = "/features/performance/" },
-  { name = "Design System", url = "/features/design-system/" },
-  { name = "Developer Experience", url = "/features/developer-experience/" },
+  { name = "Policy & Approvals", url = "/platform/policy-approvals/" },
+  { name = "Integrations", url = "/platform/integrations/" },
+  { name = "Reporting & Visibility", url = "/platform/reporting-visibility/" },
+  { name = "TMC Operations", url = "/platform/tmc-operations/" },
+  { name = "Performance & Scale", url = "/platform/performance-scale/" },
 ]
+
 [[menu.main]]
-name = "Pricing"
-url = "/pricing"
+name = "API"
+url = "/api/"
 weight = 2
+
 [[menu.main]]
-name = "Blog"
-url = "/blog"
+name = "About"
+url = "/about/"
 weight = 3
+
 [[menu.main]]
-name = "Company"
+name = "Contact"
+url = "/contact/"
 weight = 4
-[menu.main.params]
-has_submenu = true
-submenu = [
-  { name = "About Us", url = "/company/" },
-  { name = "Careers", url = "/careers/" },
-]
 
 # Footer Column 1 Menu
 [[menu.footer_column_1]]
 name = "Performance"
-url = "/features/performance/"
+url = "/platform/performance/"
 weight = 1
 [[menu.footer_column_1]]
 name = "Design System"
-url = "/features/design-system/"
+url = "/platform/design-system/"
 weight = 2
 [[menu.footer_column_1]]
 name = "Developer Experience"
-url = "/features/developer-experience/"
+url = "/platform/developer-experience/"
 weight = 3
 
 # Footer Column 2 Menu
 [[menu.footer_column_2]]
 name = "Blog"
-url = "/blog"
+url = "/blog/"
 weight = 1
 [[menu.footer_column_2]]
 name = "About Us"
-url = "/company"
+url = "/about-us/"
 weight = 2
 [[menu.footer_column_2]]
 name = "Careers"
-url = "/careers"
+url = "/careers/"
 weight = 3
 
 # Footer Column 3 Menu
 [[menu.footer_column_3]]
 name = "License"
-url = "/license"
+url = "/license/"
 weight = 1
 [[menu.footer_column_3]]
 name = "Privacy Policy"
-url = "/privacy"
+url = "/privacy/"
 weight = 2

@@ -25,12 +25,14 @@ Our theme is designed with developers in mind, providing a clean, efficient work
 ### Development Features
 
 #### Project Structure
+
 - Logical directory organization
 - Clear separation of concerns
 - Modular component architecture
 - Consistent naming conventions
 
 #### Development Workflow
+
 - Fast hot reload development server
 - Automatic asset processing
 - Source maps for debugging
@@ -39,12 +41,14 @@ Our theme is designed with developers in mind, providing a clean, efficient work
 #### Component System
 
 ##### Shortcodes
+
 - Rich set of pre-built shortcodes
 - Easy to create custom shortcodes
 - Documentation for each shortcode
 - Example implementations
 
 ##### Partials
+
 - Reusable partial templates
 - Context-aware components
 - Easy to extend and modify
@@ -53,18 +57,21 @@ Our theme is designed with developers in mind, providing a clean, efficient work
 #### Customization
 
 ##### Configuration
+
 - Central configuration file
 - Environment variables support
 - Feature flags
 - Easy theme customization
 
 ##### Styling
+
 - TailwindCSS integration
 - PostCSS processing
 - Custom CSS support
 - Design token system
 
 #### Documentation
+
 - Getting started guide
 - Component documentation
 - Configuration reference

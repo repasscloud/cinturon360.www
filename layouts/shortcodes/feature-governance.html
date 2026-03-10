@@ -1,0 +1,132 @@
+{{/* Feature Shortcode */}}
+{{ $title := .Get "title" }}
+{{ $description := .Get "description" }}
+{{ $badge := .Get "badge" }}
+{{ $badgeColor := .Get "badgeColor" | default "#5573df" }}
+{{ $buttonText := .Get "buttonText" | default "Learn More" }}
+{{ $buttonLink := .Get "buttonLink" | default "#" }}
+{{ $imagePosition := .Get "imagePosition" | default "right" }}
+
+{{ $features := split (.Get "features") "," }}
+
+<div class="grid lg:grid-cols-2 gap-12 items-center" style="--badge-color: {{ $badgeColor }}">
+    {{ if eq $imagePosition "left" }}
+    <div class="order-2 lg:order-1">
+        <div class="relative">
+            <div class="mock-dashboard hero-shadow p-4 md:p-6 relative z-10">
+                <div class="flex items-center justify-between mb-4">
+                    <h6 class="mb-0 font-semibold text-sm md:text-base">Policy and approval workflows</h6>
+                    <span class="pill">Controlled</span>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="border rounded-2xl p-4">
+                        <p class="text-muted mb-1 text-[0.7rem]">How it works</p>
+                        <h4 class="font-bold mb-2 text-xl">Route spend before it is committed</h4>
+                        <p class="text-muted mb-0 text-[0.75rem]">
+                            Apply rules by entity, team, traveller, cost centre, destination, supplier, fare cap, or exception path.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Pre-trip approvals</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Send bookings to the right approver before confirmation.</p>
+                        </div>
+
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Cost-centre routing</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Direct approval flow using the client’s finance structure.</p>
+                        </div>
+
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Out-of-policy handling</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Escalate, justify, and record exceptions with clear outcomes.</p>
+                        </div>
+
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Full audit trail</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Track approvers, timestamps, rules applied, and final decisions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-muted mt-4 mb-0 text-[0.65rem]">Cinturon360.com • Approval control without manual spreadsheets.</p>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
+    <div class="space-y-6 {{ if eq $imagePosition "left" }}order-1 lg:order-2{{ end }}">
+        <style>
+            .badge {
+                background-color: color-mix(in srgb, var(--badge-color) 10%, transparent);
+                color: var(--badge-color);
+            }
+            .badge-icon {
+                color: var(--badge-color);
+            }
+        </style>
+        <div class="badge inline-block px-4 py-2 rounded-full font-medium">{{ $badge }}</div>
+        <h3 class="text-2xl md:text-3xl font-bold">{{ $title }}</h3>
+        <p class="text-lg text-gray-600">{{ $description }}</p>
+        <ul class="space-y-4">
+            {{ range $features }}
+            <li class="flex items-center space-x-3">
+                <svg class="badge-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>{{ . | default "" }}</span>
+            </li>
+            {{ end }}
+        </ul>
+        <a href="{{ $buttonLink }}" class="btn-primary inline-block">{{ $buttonText }}</a>
+    </div>
+
+    {{ if ne $imagePosition "left" }}
+    <div>
+        <div class="relative">
+            <div class="mock-dashboard hero-shadow p-4 md:p-6 relative z-10">
+                <div class="flex items-center justify-between mb-4">
+                    <h6 class="mb-0 font-semibold text-sm md:text-base">Policy and approval workflows</h6>
+                    <span class="pill">Controlled</span>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="border rounded-2xl p-4">
+                        <p class="text-muted mb-1 text-[0.7rem]">How it works</p>
+                        <h4 class="font-bold mb-2 text-xl">Route spend before it is committed</h4>
+                        <p class="text-muted mb-0 text-[0.75rem]">
+                            Apply rules by entity, team, traveller, cost centre, destination, supplier, fare cap, or exception path.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Pre-trip approvals</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Send bookings to the right approver before confirmation.</p>
+                        </div>
+
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Cost-centre routing</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Direct approval flow using the client’s finance structure.</p>
+                        </div>
+
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Out-of-policy handling</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Escalate, justify, and record exceptions with clear outcomes.</p>
+                        </div>
+
+                        <div class="border rounded-2xl p-4">
+                            <div class="route-pill mb-3 inline-flex">Full audit trail</div>
+                            <p class="text-muted mb-0 text-[0.75rem]">Track approvers, timestamps, rules applied, and final decisions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-muted mt-4 mb-0 text-[0.65rem]">Cinturon360.com • Approval control without manual spreadsheets.</p>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
