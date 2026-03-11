@@ -20,6 +20,10 @@
   .rounded-lg {
     border-radius: 2rem;
   }
+
+  .text-c360-accent {
+    color: var(--c360-accent);
+  }
 }
 
 @layer components {
@@ -312,4 +316,8 @@
     background: var(--c360-dark);
     color: rgba(248,250,252,0.7);
   }
+}
+
+.text-c360-accent {
+  color: var(--c360-accent);
 }

@@ -105,8 +105,8 @@ url = "/signin"
 
 # Get Started button
 [params.header.buttons.getStarted]
-text = "Get Started"
-url = "/get-started"
+text = "Reach Out"
+url = "/contact"
 
 # Blog configuration
 [params.blog]
@@ -116,7 +116,7 @@ subtitle = "Learn more about web development and best practices"
 
 # Blog CTA configuration
 [params.blog.cta]
-enable = true # Enable/disable CTA in blog posts
+enable = false # Enable/disable CTA in blog posts
 
 # Sidebar configuration
 [params.blog.sidebar]
@@ -142,7 +142,7 @@ count = 20
 enable = true
 title = "Subscribe to Newsletter"
 description = "Get the latest posts delivered right to your inbox"
-action = "https://formspree.io/f/your-form-id"
+action = "https://formspree.io/f/xjgawwbg"
 emailName = "email"
 buttonText = "Subscribe"
 placeholder = "Enter your email"
@@ -255,10 +255,10 @@ url = "/careers/"
 weight = 3
 
 # Footer Column 3 Menu
-[[menu.footer_column_3]]
-name = "License"
-url = "/license/"
-weight = 1
+# [[menu.footer_column_3]]
+# name = "License"
+# url = "/license/"
+# weight = 1
 [[menu.footer_column_3]]
 name = "Privacy Policy"
 url = "/privacy/"

@@ -28,8 +28,8 @@ testimonials:
 
 {{< hero 
     headline="Wrap your travel in "
-    headline2="360° visibility"
-    headline3="."
+    headline2="360°"
+    headline3=" visibility."
     sub_headline="Cinturon360 connects to where your people already book, applies policy and approvals, and delivers finance-grade reporting for corporate, government, education, and travel partners."
     supporting_text="Works with GDS/NDC, direct suppliers, and travel agents. No rip-and-replace."
     primary_button_text="Book a demo"
