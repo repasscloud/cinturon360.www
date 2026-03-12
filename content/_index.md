@@ -34,8 +34,6 @@ testimonials:
     supporting_text="Works with GDS/NDC, direct suppliers, and travel agents. No rip-and-replace."
     primary_button_text="Book a demo"
     primary_button_url="/contact"
-    secondary_button_text="View Docs"
-    secondary_button_url="https://docs.cinturon360.com/"
     gradient-from="#38bdf833"
     gradient-to="#0f172a"
 >}}
