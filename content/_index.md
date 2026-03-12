@@ -62,8 +62,7 @@ testimonials:
     title="Works with your existing booking ecosystem"
     description="Cinturon360 is not a rip-and-replace online booking tool. It wraps around your current channels and suppliers so you can govern bookings made through TMCs, GDS/NDC, direct suppliers, and other connected sources."
     badge="Integrations"
-    badgeColor="#f97316"
-    image="/images/feature-2.svg"
+    badgeColor="#0f172a"
     buttonText="Explore Integrations"
     buttonLink="/platform/integrations/"
     features="GDS and NDC support,TMC connectors,Direct supplier flows,Expense and ERP handoff"
@@ -75,7 +74,6 @@ testimonials:
     description="Give travel, finance, procurement, and leadership teams a clear picture of spend, compliance, exceptions, and operational activity across the organisation."
     badge="Reporting"
     badgeColor="#0f172a"
-    image="/images/feature-3.svg"
     buttonText="See Reporting"
     buttonLink="/platform/reporting-visibility/"
     features="Spend visibility,Compliance reporting,Exception monitoring,Export-ready data"
@@ -84,11 +82,11 @@ testimonials:
 
 {{< /features-section >}}
 
-{{< testimonials 
+<!-- {{< testimonials 
     title="Built for everyone around corporate travel"
     description="Designed for corporate, government, education, travel agencies, TMCs, and suppliers operating across shared policy, approval, and reporting requirements."
     animate="true"
     background-color="#f8fafc"
->}}
+>}} -->
 
 {{< cta >}}
