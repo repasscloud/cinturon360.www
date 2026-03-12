@@ -1,9 +1,8 @@
 name: Deploy Hugo site to Pages
 
 on:
-  pull_request:
+  push:
     branches: ["main"]
-    types: [closed]
 
   workflow_dispatch:
 
@@ -22,7 +21,6 @@ defaults:
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'dev'
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.156.0
@@ -35,10 +33,9 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
 
-      - name: Checkout main
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main
           submodules: recursive
 
       - name: Setup Pages
@@ -63,7 +60,6 @@ jobs:
           path: ./public
 
   deploy:
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'dev'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
