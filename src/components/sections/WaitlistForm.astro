@@ -1,0 +1,105 @@
+---
+// Formspree action: xvzwknqb
+---
+
+<form
+  action="https://formspree.io/f/xvzwknqb"
+  method="POST"
+  class="space-y-5 max-w-xl"
+>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="first-name" class="block text-sm font-medium text-slate-700 mb-1.5">
+        First name
+      </label>
+      <input
+        type="text"
+        id="first-name"
+        name="first_name"
+        required
+        class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:ring-1 focus:ring-sky-400 focus:outline-none"
+        placeholder="Jane"
+      />
+    </div>
+    <div>
+      <label for="last-name" class="block text-sm font-medium text-slate-700 mb-1.5">
+        Last name
+      </label>
+      <input
+        type="text"
+        id="last-name"
+        name="last_name"
+        required
+        class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:ring-1 focus:ring-sky-400 focus:outline-none"
+        placeholder="Smith"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">
+      Email address
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:ring-1 focus:ring-sky-400 focus:outline-none"
+      placeholder="jane@example.com"
+    />
+  </div>
+
+  <div>
+    <label for="organisation" class="block text-sm font-medium text-slate-700 mb-1.5">
+      Organisation
+    </label>
+    <input
+      type="text"
+      id="organisation"
+      name="organisation"
+      class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:ring-1 focus:ring-sky-400 focus:outline-none"
+      placeholder="Acme Travel Co."
+    />
+  </div>
+
+  <div>
+    <label for="interest" class="block text-sm font-medium text-slate-700 mb-1.5">
+      I am interested as a…
+    </label>
+    <select
+      id="interest"
+      name="interest_type"
+      class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 focus:border-sky-400 focus:ring-1 focus:ring-sky-400 focus:outline-none"
+    >
+      <option value="">Select your role</option>
+      <option value="tmc">Travel Management Company (TMC)</option>
+      <option value="corporate">Corporate travel team</option>
+      <option value="government">Government organisation</option>
+      <option value="leisure-advisor">Leisure or luxury travel advisor</option>
+      <option value="partner">Implementation or technology partner</option>
+      <option value="developer">Developer or technical stakeholder</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="notes" class="block text-sm font-medium text-slate-700 mb-1.5">
+      Anything you'd like to tell us? <span class="text-slate-400 font-normal">(optional)</span>
+    </label>
+    <textarea
+      id="notes"
+      name="notes"
+      rows="3"
+      class="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:ring-1 focus:ring-sky-400 focus:outline-none resize-none"
+      placeholder="Brief context about your travel program or interest..."
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="btn-primary w-full text-sm py-3"
+  >
+    Join Waitlist
+  </button>
+</form>

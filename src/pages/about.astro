@@ -1,0 +1,132 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="About"
+  description="Cinturon360 is a travel governance, control, and visibility platform built to work across the booking channels, suppliers, and systems organisations already use."
+>
+  <!-- Hero -->
+  <div class="pt-24 pb-16 bg-gradient-to-b from-blue-50 via-blue-50 to-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        A travel governance platform built around your existing ecosystem
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto mb-12">
+        Cinturon360 is being built to help TMCs and their clients control approvals, policy, compliance, reporting, and operational visibility across modern travel programs.
+      </p>
+      <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-3">What Cinturon360 Does</h2>
+        <p class="text-slate-600 leading-relaxed">
+          Cinturon360 is developed by{' '}
+          <a href="https://repasscloud.com" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">
+            RePass Cloud
+          </a>{' '}
+          as a travel governance, control, and visibility platform. It is designed to work across the booking channels, suppliers, workflows, and systems organisations already use, helping TMCs and their clients apply approvals, policy, reporting, and financial oversight without forcing a full rip-and-replace approach.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Who it's for -->
+  <div id="who-we-serve" class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <h2 class="font-heading text-3xl font-bold text-center text-slate-900 mb-12">Who Cinturon360 Is For</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        {[
+          { id: 'tmc', icon: '🏢', title: 'TMCs', description: 'Built for travel management companies that need a stronger platform for client onboarding, policy control, approvals, integrations, reporting, and operational oversight.' },
+          { id: 'corporate', icon: '💼', title: 'Corporate Travel Programs', description: 'Designed for organisations that want clearer control over travel approvals, spend visibility, compliance, and reporting across existing booking channels.' },
+          { id: 'government', icon: '🏛️', title: 'Government & Controlled Environments', description: 'Suitable for travel environments that require stronger governance, structured approvals, auditability, and more defensible operational visibility.' },
+          { id: 'leisure', icon: '✈️', title: 'Leisure & High-Net-Worth', description: 'Governance and visibility tools for premium leisure programs — structured oversight for advisors managing high-net-worth clients who expect precision, discretion, and quality.' },
+        ].map((seg) => (
+          <div id={seg.id} class="card">
+            <div class="text-3xl mb-3">{seg.icon}</div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">{seg.title}</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">{seg.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Principles -->
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <h2 class="font-heading text-3xl font-bold text-center text-slate-900 mb-12">Product Principles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { icon: '🔄', title: 'No Rip-and-Replace', description: 'Cinturon360 is designed to work around existing travel channels, suppliers, and managed travel workflows rather than forcing a full platform replacement.' },
+          { icon: '⚖️', title: 'Practical Governance', description: 'The platform focuses on approvals, policy enforcement, cost allocation, exception handling, integrations, and reporting that real travel programs need every day.' },
+          { icon: '👁️', title: 'Clear Visibility', description: 'Cinturon360 is built to give travel, finance, operations, procurement, and leadership teams a clearer view of spend, compliance, and booking activity.' },
+        ].map((p) => (
+          <div class="card text-center">
+            <div class="text-4xl mb-4">{p.icon}</div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{p.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{p.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Why it exists -->
+  <div class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-heading text-3xl font-bold text-center text-slate-900 mb-12">Why Cinturon360 Exists</h2>
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-10">
+          <div class="prose prose-slate max-w-none prose-p:text-slate-600 prose-p:leading-relaxed">
+            <p>Cinturon360 is being developed to solve a common problem in managed travel: important travel decisions are often spread across disconnected booking tools, supplier channels, approval workflows, reporting processes, and manual workarounds.</p>
+            <p>For TMCs, that creates unnecessary operational complexity across client onboarding, account servicing, policy management, reporting, and integration handling.</p>
+            <p>For client organisations, it can mean limited visibility, inconsistent approvals, weak reporting, poor exception management, and too much dependence on fragmented processes.</p>
+            <p>Cinturon360 is being built to become the operating layer above that complexity, giving TMCs and their clients a more connected way to manage travel governance, operational control, and financial visibility.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Built by RePass Cloud -->
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <h2 class="font-heading text-3xl font-bold text-slate-900">Built by RePass Cloud</h2>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 md:p-10">
+          <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-center">
+            <div class="flex justify-center md:justify-start">
+              <img
+                src="/images/company/danijeljw.jpeg"
+                alt="Danijel-James Wynyard"
+                class="w-44 h-44 object-cover rounded-2xl shadow-sm"
+              />
+            </div>
+            <div>
+              <h3 class="font-heading text-2xl font-bold text-slate-900 mb-1">Danijel-James Wynyard</h3>
+              <p class="text-sky-600 font-medium mb-4">Founder and Product Lead</p>
+              <p class="text-slate-600 mb-3 text-sm leading-relaxed">
+                Cinturon360 is being led by Danijel-James Wynyard through RePass Cloud, with a focus on building a more capable platform for TMCs and the organisations they serve.
+              </p>
+              <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                The product direction is centred on approvals, policy, integrations, reporting, client management, and operational control across the modern travel ecosystem.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/djwynyard/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm font-medium text-sky-600 hover:underline"
+              >
+                <img src="/images/social/linkedin.svg" alt="" class="w-4 h-4" />
+                View LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <CTA />
+</PageLayout>

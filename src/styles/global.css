@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+
+  --color-primary-50: #eef1fc;
+  --color-primary-100: #dde3f9;
+  --color-primary-200: #bbc7f3;
+  --color-primary-300: #99abec;
+  --color-primary-400: #778fe6;
+  --color-primary-500: #5573df;
+  --color-primary-600: #425ad6;
+  --color-primary-700: #3548ab;
+  --color-primary-800: #283680;
+  --color-primary-900: #1b2456;
+
+  --color-secondary-50: #faf5ff;
+  --color-secondary-100: #f3e8ff;
+  --color-secondary-200: #e9d5ff;
+  --color-secondary-300: #d8b4fe;
+  --color-secondary-400: #c084fc;
+  --color-secondary-500: #a855f7;
+  --color-secondary-600: #9333ea;
+  --color-secondary-700: #7e22ce;
+  --color-secondary-800: #6b21a8;
+  --color-secondary-900: #581c87;
+}
+
+@layer base {
+  :root {
+    --c360-primary: #38bdf8;
+    --c360-accent: #f97316;
+    --c360-dark: #0f172a;
+    --c360-muted: #94a3b8;
+    --c360-bg: #0f172a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-sky-400 text-slate-900 hover:bg-sky-300 focus:ring-sky-400;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 border border-white/30 text-white bg-white/5 hover:bg-white/10 focus:ring-white/30;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus:ring-slate-200;
+  }
+
+  .hero-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 text-sky-300 text-sm font-medium backdrop-blur-sm;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-slate-300 hover:text-white transition-colors duration-150;
+  }
+
+  .pill {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+}

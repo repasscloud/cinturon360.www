@@ -1,0 +1,81 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="Policy & Approvals"
+  description="Route bookings to the right approvers before spend is committed. Apply flexible policy rules across entities, teams, travellers, and destinations."
+>
+  <div class="pt-24 pb-16" style="background: linear-gradient(to bottom, #f0f9ff, #ffffff);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+          Policy & Approvals
+        </span>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          Approvals before spend is committed
+        </h1>
+        <p class="text-xl text-slate-600 leading-relaxed">
+          Route bookings to the right approvers, apply structured policy logic, and maintain a full audit trail across every decision in your travel program.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <h2 class="font-heading text-3xl font-bold text-slate-900 mb-6">Flexible policy control</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Cinturon360 is being designed to support organisations with structured approval requirements. Policy logic should reflect the real complexity of how travel is governed — across different entities, teams, traveller types, destinations, and spend thresholds.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            That means supporting approval paths that match the organisation, not just a simplified version of it.
+          </p>
+          <div class="space-y-3">
+            {[
+              'Pre-trip approvals before spend is committed',
+              'Policy rules by entity, team, traveller type, or cost centre',
+              'Destination and supplier-based policy logic',
+              'Fare cap enforcement and class-of-travel rules',
+              'Out-of-policy handling with structured exceptions',
+              'Escalation paths for complex or high-value bookings',
+              'Full audit trail for every approval and policy outcome',
+            ].map((item) => (
+              <div class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3 h-3 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span class="text-sm text-slate-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2 class="font-heading text-3xl font-bold text-slate-900 mb-6">Built for real programs</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Travel programs do not all look the same. An enterprise organisation may need approval chains across multiple business units, different rules for different traveller categories, and exception handling for senior executives or unusual itineraries.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            A government agency may need defensible decision records, stronger audit requirements, and tight policy controls around specific supplier or destination categories.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Cinturon360 is being built to support both, and the many program structures in between.
+          </p>
+          <div class="mt-8 p-6 bg-sky-50 rounded-2xl border border-sky-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Exception handling</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Out-of-policy bookings should not simply be blocked. The platform is being designed to support structured exception paths — where a traveller can request approval for an out-of-policy choice, a justification can be recorded, and the decision can be escalated or tracked.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <CTA />
+</PageLayout>

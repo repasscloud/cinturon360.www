@@ -1,0 +1,48 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ContactForm from '../components/sections/ContactForm.astro';
+---
+
+<PageLayout
+  title="Contact"
+  description="Get in touch about Cinturon360, partnerships, API discussions, and early access."
+>
+  <div class="pt-24 pb-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <!-- Left: content -->
+        <div>
+          <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Contact Cinturon360
+          </h1>
+          <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+            Cinturon360 is currently in development. Use the form to get in touch with our team.
+          </p>
+
+          <h2 class="font-heading text-lg font-semibold text-slate-900 mb-4">We welcome enquiries about:</h2>
+          <ul class="space-y-3">
+            {[
+              'Early access and platform updates',
+              'TMC onboarding and client use cases',
+              'API and integration discussions',
+              'Partnership opportunities',
+              'Implementation and commercial conversations',
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-slate-600">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
+                <span class="text-sm">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Right: form -->
+        <div>
+          <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</PageLayout>

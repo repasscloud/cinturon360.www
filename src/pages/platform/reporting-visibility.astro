@@ -1,0 +1,80 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/sections/CTA.astro';
+
+const iconColorMap: Record<string, string> = {
+  emerald: 'bg-emerald-50 text-emerald-700',
+  sky: 'bg-sky-50 text-sky-700',
+  orange: 'bg-orange-50 text-orange-700',
+  purple: 'bg-purple-50 text-purple-700',
+};
+---
+
+<PageLayout
+  title="Reporting & Visibility"
+  description="Finance-grade reporting and operational visibility across spend, compliance, exceptions, and booking activity for TMCs and their clients."
+>
+  <div class="pt-24 pb-16" style="background: linear-gradient(to bottom, #f0fdf4, #ffffff);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700 mb-4">
+          Reporting & Visibility
+        </span>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          Finance-grade visibility across your travel program
+        </h1>
+        <p class="text-xl text-slate-600 leading-relaxed">
+          Give travel, finance, procurement, and leadership teams a clear picture of spend, compliance, exceptions, and operational activity across the organisation.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        {[
+          { icon: '💰', color: 'emerald', title: 'Spend Visibility', description: 'Understand travel spend across entities, teams, travellers, suppliers, and booking channels. Segment and slice the data to answer the questions that matter to finance and procurement.' },
+          { icon: '✅', color: 'sky', title: 'Compliance Reporting', description: 'Track what proportion of travel is in-policy, out-of-policy, or subject to approved exceptions. Give compliance and finance teams the data they need to review and report on policy performance.' },
+          { icon: '⚠️', color: 'orange', title: 'Exception Monitoring', description: 'Track where exceptions are occurring, who is approving them, and whether patterns are forming. Surface exception trends before they become systemic issues.' },
+          { icon: '📤', color: 'purple', title: 'Export-Ready Data', description: 'Get data out of the platform into finance systems, ERP workflows, BI tools, or procurement reporting. Structured outputs designed for downstream use.' },
+        ].map((item) => (
+            <div class="card">
+              <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl ${iconColorMap[item.color]}`}>
+                {item.icon}
+              </div>
+              <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+            </div>
+        ))}
+      </div>
+
+      <!-- Audience breakdown -->
+      <div class="bg-slate-50 rounded-2xl p-8 md:p-10">
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-6 text-center">Visibility for every stakeholder</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { audience: 'TMCs', points: ['Visibility across client accounts', 'Servicing conversation data', 'Portfolio-level reporting', 'Operational issue surfacing'] },
+            { audience: 'Corporate Clients', points: ['Spend and policy performance', 'Approval outcomes by team', 'Exception trends', 'Finance-ready outputs'] },
+            { audience: 'Government', points: ['Stronger oversight records', 'Defensible reporting trails', 'Audit-ready visibility', 'Policy adherence data'] },
+            { audience: 'Enterprise', points: ['Cross-entity visibility', 'Business unit segmentation', 'Leadership dashboards', 'Procurement reporting'] },
+          ].map((group) => (
+            <div>
+              <h3 class="font-heading text-base font-bold text-slate-900 mb-3">{group.audience}</h3>
+              <ul class="space-y-2">
+                {group.points.map((point) => (
+                  <li class="flex items-start gap-2 text-sm text-slate-600">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <CTA />
+</PageLayout>

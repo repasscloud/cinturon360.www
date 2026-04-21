@@ -1,0 +1,77 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/sections/CTA.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<PageLayout
+  title="Blog"
+  description="Articles on travel governance, TMC operations, policy management, and the future of managed travel."
+>
+  <div class="pt-24 pb-8 bg-gradient-to-b from-slate-50 to-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+        Latest Articles
+      </h1>
+      <p class="text-xl text-slate-600">
+        Perspectives on travel governance, TMC operations, and modern managed travel.
+      </p>
+    </div>
+  </div>
+
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      {posts.length === 0 ? (
+        <p class="text-slate-500 text-center py-16">No posts yet. Check back soon.</p>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => {
+            const formattedDate = new Intl.DateTimeFormat('en-AU', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            }).format(post.data.date);
+
+            return (
+              <article class="card flex flex-col group hover:shadow-lg transition-shadow duration-200">
+                {post.data.featured_image && (
+                  <div class="mb-4 rounded-xl overflow-hidden -mx-6 -mt-6">
+                    <img
+                      src={post.data.featured_image}
+                      alt={post.data.title}
+                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                {post.data.categories && post.data.categories.length > 0 && (
+                  <div class="mb-2 flex flex-wrap gap-1">
+                    {post.data.categories.map((cat: string) => (
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-sky-100 text-sky-700">
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <h2 class="font-heading text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-sky-700 transition-colors">
+                  <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                </h2>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4 flex-1">
+                  {post.data.description}
+                </p>
+                <div class="flex items-center justify-between text-xs text-slate-400">
+                  <span>{post.data.author}</span>
+                  <time>{formattedDate}</time>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  </div>
+
+  <CTA />
+</PageLayout>

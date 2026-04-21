@@ -1,0 +1,118 @@
+---
+const features = [
+  {
+    icon: '🛡️',
+    badge: 'Governance',
+    badgeColor: 'sky',
+    title: 'Policy and Approval Workflows',
+    description:
+      'Route bookings to the right approvers before spend is committed. Apply rules by entity, team, traveller, cost centre, destination, supplier, fare cap, or exception path.',
+    bullets: [
+      'Pre-trip approvals',
+      'Cost-centre routing',
+      'Out-of-policy handling',
+      'Full audit trail',
+    ],
+    href: '/platform/policy-approvals',
+    cta: 'Learn More',
+  },
+  {
+    icon: '🔗',
+    badge: 'Integrations',
+    badgeColor: 'purple',
+    title: 'Works with Your Existing Booking Ecosystem',
+    description:
+      'Cinturon360 is not a rip-and-replace online booking tool. It wraps around your current channels so you can govern bookings made through TMCs, GDS/NDC, direct suppliers, and other connected sources.',
+    bullets: [
+      'GDS and NDC support',
+      'TMC connectors',
+      'Direct supplier flows',
+      'Expense and ERP handoff',
+    ],
+    href: '/platform/integrations',
+    cta: 'Explore Integrations',
+  },
+  {
+    icon: '📊',
+    badge: 'Reporting',
+    badgeColor: 'emerald',
+    title: 'Finance-Grade Reporting and Visibility',
+    description:
+      'Give travel, finance, procurement, and leadership teams a clear picture of spend, compliance, exceptions, and operational activity across the organisation.',
+    bullets: [
+      'Spend visibility',
+      'Compliance reporting',
+      'Exception monitoring',
+      'Export-ready data',
+    ],
+    href: '/platform/reporting-visibility',
+    cta: 'See Reporting',
+  },
+];
+
+type BadgeColor = 'sky' | 'orange' | 'emerald' | 'purple' | 'slate';
+
+const badgeColorClasses: Record<BadgeColor, string> = {
+  sky: 'bg-sky-100 text-sky-700',
+  orange: 'bg-orange-100 text-orange-700',
+  emerald: 'bg-emerald-100 text-emerald-700',
+  purple: 'bg-purple-100 text-purple-700',
+  slate: 'bg-slate-100 text-slate-600',
+};
+
+const iconBgClasses: Record<BadgeColor, string> = {
+  sky: 'bg-sky-50',
+  orange: 'bg-orange-50',
+  emerald: 'bg-emerald-50',
+  purple: 'bg-purple-50',
+  slate: 'bg-slate-50',
+};
+---
+
+<section class="section bg-slate-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div class="text-center mb-16">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+        Control, approvals, and visibility across your travel stack
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Cinturon360 connects to existing booking channels, applies policy and approval workflows, and gives finance and operations teams a single view of spend, exceptions, and audit.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {features.map((feature) => {
+        const color = feature.badgeColor as BadgeColor;
+        return (
+          <div class="card flex flex-col">
+            <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-xl ${iconBgClasses[color]}`}>
+              {feature.icon}
+            </div>
+            <span class={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium mb-3 w-fit ${badgeColorClasses[color]}`}>
+              {feature.badge}
+            </span>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">{feature.description}</p>
+            <ul class="space-y-1.5 mb-6 flex-1">
+              {feature.bullets.map((bullet) => (
+                <li class="flex items-center gap-2 text-sm text-slate-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+            <a
+              href={feature.href}
+              class="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors mt-auto"
+            >
+              {feature.cta}
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

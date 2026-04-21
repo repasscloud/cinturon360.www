@@ -1,0 +1,67 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="Performance & Scale"
+  description="Cinturon360 is being built to handle growing client portfolios, layered approval structures, and multi-entity travel programs without performance trade-offs."
+>
+  <div class="pt-24 pb-16 bg-gradient-to-b from-slate-50 to-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-200 text-slate-700 mb-4">
+          Performance & Scale
+        </span>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          Built to scale with your program
+        </h1>
+        <p class="text-xl text-slate-600 leading-relaxed">
+          As travel programs grow in complexity — more entities, more approval layers, more booking channels, more reporting requirements — the platform should scale with them without breaking down.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        {[
+          { icon: '⚡', title: 'Fast Operational Workflows', description: 'Approval flows, policy visibility, and reporting that support action without delay. Performance means responsive interfaces and data that is current when you need it.' },
+          { icon: '📈', title: 'Built for Growing Portfolios', description: 'Cinturon360 is being built for TMCs managing growing client rosters and for organisations expanding across entities and geographies. Scale should not require redesigning the operating model.' },
+          { icon: '⚙️', title: 'Scalable Governance', description: 'Support multiple entities, layered approval structures, varied traveller categories, client-specific policies, and mixed booking channels — without governance becoming a bottleneck.' },
+          { icon: '🔗', title: 'Integration-Aware Performance', description: 'Governance should not slow down the booking experience. The platform is being designed so that policy checks, approval routing, and data flows operate efficiently alongside existing booking channels.' },
+        ].map((item) => (
+          <div class="card">
+            <div class="text-3xl mb-3">{item.icon}</div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Scale dimensions -->
+      <div class="bg-slate-50 rounded-2xl p-8 md:p-10">
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-6 text-center">Dimensions of scale Cinturon360 is built for</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            'Multiple client entities',
+            'Layered approval chains',
+            'Varied traveller categories',
+            'Client-specific policies',
+            'Mixed booking channels',
+            'Supplier diversity',
+            'Increasing compliance needs',
+            'Growing reporting demands',
+          ].map((item) => (
+            <div class="bg-white rounded-xl p-4 text-center border border-slate-100">
+              <p class="text-sm font-medium text-slate-700">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <CTA />
+</PageLayout>
