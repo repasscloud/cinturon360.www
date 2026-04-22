@@ -11,7 +11,7 @@ import CTA from '../components/sections/CTA.astro';
   <!-- Hero -->
   <section
     class="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32"
-    style="background: linear-gradient(30deg, #38bdf833 0%, #0f172a 60%);"
+    style="background: var(--c360-dark);"
   >
     <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>
     <div class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: #f97316;"></div>
@@ -25,12 +25,12 @@ import CTA from '../components/sections/CTA.astro';
           </span>
         </div>
         <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-          Built for how TMCs actually operate.
+          Built for how TMCs<br />actually operate.
         </h1>
-        <p class="text-lg md:text-xl text-slate-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-lg md:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style="color: rgba(248,250,252,0.55);">
           Cinturon360 is a TMC-first platform that replaces legacy back-office complexity with modern automation, governance, and visibility — without disrupting your existing booking channels or supplier relationships.
         </p>
-        <p class="text-sm text-slate-500 mb-10">
+        <p class="text-sm text-slate-400 mb-10">
           Replaces Tramada. Works alongside GDS, NDC, and direct suppliers. No rip-and-replace.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -53,7 +53,7 @@ import CTA from '../components/sections/CTA.astro';
           The problem
         </span>
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-          What a TMC's day looks like without Cinturon360
+          What a TMC's day looks like without <span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span>
         </h2>
         <p class="text-lg text-slate-600 max-w-2xl mx-auto">
           Legacy tools were built for a different era. The gap between what TMCs need and what their software delivers has never been wider.
@@ -109,7 +109,7 @@ import CTA from '../components/sections/CTA.astro';
           Platform capabilities
         </span>
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-          What TMCs get with Cinturon360
+          What TMCs get with <span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span>
         </h2>
         <p class="text-lg text-slate-600 max-w-2xl mx-auto">
           Not a point solution for one problem. A platform that handles the operations layer so your team can focus on clients, not administration.
@@ -211,7 +211,7 @@ import CTA from '../components/sections/CTA.astro';
           </div>
 
           <div class="rounded-xl p-6" style="background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.2);">
-            <h3 class="font-heading font-semibold text-sky-400 mb-4">Cinturon360</h3>
+            <h3 class="font-heading font-semibold mb-4"><span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span></h3>
             <ul class="space-y-3">
               {[
                 'Cloud-native, APAC-hosted, globally scalable',
