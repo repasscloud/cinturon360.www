@@ -72,9 +72,8 @@ const socialLinks = [
           {socialLinks.map((link) => (
             <a href={link.href} target="_blank" rel="noopener noreferrer"
               aria-label={link.label}
-              class="w-8 h-8 flex items-center justify-center rounded-lg transition-all hover:bg-white/10"
-              style="color: rgba(248,250,252,0.4);">
-              <img src={link.icon} alt={link.label} class="w-4 h-4 opacity-50 hover:opacity-100 transition-opacity" />
+              class="w-8 h-8 flex items-center justify-center rounded-lg transition-all hover:bg-white/10 group">
+              <img src={link.icon} alt={link.label} class="w-4 h-4 transition-opacity opacity-40 group-hover:opacity-90" style="filter: brightness(0) invert(1);" />
             </a>
           ))}
         </div>
