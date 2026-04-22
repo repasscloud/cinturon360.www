@@ -1,11 +1,20 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import ContactForm from '../components/sections/ContactForm.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Cinturon360',
+  url: 'https://cinturon360.com/contact',
+  description: 'Get in touch about early access, TMC partnerships, API integrations, and commercial conversations.',
+};
 ---
 
 <PageLayout
   title="Contact"
   description="Get in touch about Cinturon360 — early access, TMC partnerships, API integrations, and commercial conversations."
+  schema={schema}
 >
 
   <!-- Dark hero -->

@@ -7,11 +7,43 @@ import FeaturesGrid from '../components/sections/FeaturesGrid.astro';
 import WhoWeServe from '../components/sections/WhoWeServe.astro';
 import LegacyChallenger from '../components/sections/LegacyChallenger.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Cinturon360',
+  applicationCategory: 'BusinessApplication',
+  applicationSubCategory: 'TravelManagement',
+  operatingSystem: 'Web',
+  url: 'https://cinturon360.com',
+  description: 'All-in-one travel management platform — flights, hotels, cruise, experiences, expense management, mobile eSIM, payments, policy approvals, and a consumer booking portal. Serving TMCs, corporates, leisure advisors, government, and consumers.',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'AUD',
+    availability: 'https://schema.org/PreOrder',
+    seller: { '@type': 'Organization', name: 'Cinturon360' },
+  },
+  featureList: [
+    'Flight booking and management',
+    'Hotel booking and management',
+    'Cruise and experience bookings',
+    'Mobile prepaid eSIM management',
+    'Expense management',
+    'Pre-trip policy approvals',
+    'Finance-grade reporting',
+    'TMC operations and client management',
+    'Corporate travel programs',
+    'Consumer booking portal',
+    'GDS and NDC integrations',
+    'REST API access',
+  ],
+};
 ---
 
 <PageLayout
   title="TMC-First Travel Management Platform"
   description="Cinturon360 is the modern operating layer for travel management companies — replacing Tramada and legacy mid-office tools with governance, automation, and finance-grade reporting. APAC-built, globally ready."
+  schema={schema}
 >
   <Hero />
   <ClientLogos />

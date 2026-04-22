@@ -1,19 +1,24 @@
 ---
+import CookieConsent from '../components/layout/CookieConsent.astro';
+
 export interface Props {
   title: string;
   description?: string;
   image?: string;
   noIndex?: boolean;
+  schema?: object;
 }
 
 const {
   title,
   description = 'Cinturon360 — Travel governance, approvals, integrations, and finance-grade reporting for TMCs, corporate, and government travel programs.',
-  image = '/images/logo.svg',
+  image = '/images/logo.png',
   noIndex = false,
+  schema,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -28,20 +33,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={absoluteImage} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Cinturon360" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@repasscloud" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={absoluteImage} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,6 +62,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google Consent Mode v2 defaults — MUST load before GTM/GA -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500,
+      });
+      // Restore a previously granted consent immediately so GA fires on return visits
+      (function () {
+        try {
+          if (localStorage.getItem('c360_consent') === 'granted') {
+            gtag('consent', 'update', {
+              analytics_storage: 'granted',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+            });
+          }
+        } catch (e) {}
+      })();
+    </script>
 
     <!-- Google Tag Manager -->
     <script is:inline>
@@ -78,8 +116,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "@type": "Organization",
       "name": "Cinturon360",
       "url": "https://cinturon360.com",
-      "logo": "https://cinturon360.com/images/logo.svg",
-      "description": "TMC-first travel governance platform — policy, approvals, automation, and finance-grade reporting for travel management companies and their clients.",
+      "logo": "https://cinturon360.com/images/logo.png",
+      "description": "Cinturon360 is an end-to-end travel management platform consolidating 20+ legacy systems — serving TMCs, corporates, leisure advisors, government, and consumers with flights, hotels, cruise, experiences, expense management, mobile eSIM, payments, policy approvals, and finance-grade reporting.",
       "foundingLocation": {
         "@type": "Place",
         "address": {
@@ -101,6 +139,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }
     }
     </script>
+
+    <!-- JSON-LD: Page-specific -->
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -114,5 +155,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </noscript>
 
     <slot />
+    <CookieConsent />
   </body>
 </html>

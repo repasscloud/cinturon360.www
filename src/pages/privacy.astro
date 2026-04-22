@@ -4,8 +4,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 
 <PageLayout
   title="Privacy Policy"
-  description="How Cinturon360 and RePass Cloud collect, use, disclose, store, and protect personal information."
-  noIndex={true}
+  description="How Cinturon360 and RePass Cloud collect, use, disclose, and protect personal information — covering GDPR, UK GDPR, Australian Privacy Act, and California CCPA."
 >
   <div class="pt-24 pb-16 bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
@@ -20,14 +19,13 @@ import PageLayout from '../layouts/PageLayout.astro';
         prose-ul:text-slate-600 prose-li:mb-1">
 
         <h1>Privacy Policy</h1>
-        <p class="text-slate-500 text-sm">Last updated: 2026-03-09</p>
+        <p class="text-slate-500 text-sm">Last updated: 2026-04-23</p>
 
-        <p>This Privacy Policy explains how personal information is collected, used, disclosed, stored, and protected when you interact with Cinturon360 and related services operated by RePass Cloud Pty Ltd.</p>
+        <p>This Privacy Policy explains how personal information is collected, used, disclosed, stored, and protected when you interact with Cinturon360 and related services operated by RePass Cloud Pty Ltd (<strong>"we"</strong>, <strong>"us"</strong>, or <strong>"our"</strong>).</p>
 
         <p>If you do not agree with this Privacy Policy, do not use the Services.</p>
 
         <h2>1. Who We Are</h2>
-        <p>This Privacy Policy applies to RePass Cloud Pty Ltd.</p>
         <p>
           <strong>RePass Cloud Pty Ltd</strong><br />
           PO BOX 262<br />
@@ -39,8 +37,8 @@ import PageLayout from '../layouts/PageLayout.astro';
         <h2>2. Roles: Controller and Processor</h2>
         <p>Depending on the context, RePass Cloud may act as either:</p>
         <ul>
-          <li><strong>Data controller</strong>, such as when operating our websites, managing accounts, handling billing, or running marketing and business administration activities.</li>
-          <li><strong>Data processor / service provider</strong>, such as when processing personal information on behalf of a business customer using Cinturon360.</li>
+          <li><strong>Data controller</strong> — when operating our websites, managing accounts, handling billing, or running marketing and business administration activities.</li>
+          <li><strong>Data processor / service provider</strong> — when processing personal information on behalf of a business customer using Cinturon360.</li>
         </ul>
 
         <h2>3. Information We Collect</h2>
@@ -74,24 +72,63 @@ import PageLayout from '../layouts/PageLayout.astro';
           <li>Manage billing, accounting, and business administration</li>
           <li>Comply with legal obligations</li>
           <li>Improve products and services</li>
+          <li>Analyse website usage through analytics tools (with your consent where required)</li>
         </ul>
 
         <h2>5. Legal Bases for Processing</h2>
         <ul>
           <li><strong>Contract</strong> — to provide the Services requested</li>
           <li><strong>Legitimate interests</strong> — securing and improving the Services, preventing fraud</li>
-          <li><strong>Consent</strong> — where required for marketing, cookies, or optional activities</li>
+          <li><strong>Consent</strong> — where required for analytics cookies or optional activities</li>
           <li><strong>Legal obligation</strong> — where processing is required by law</li>
         </ul>
 
-        <h2>6. Cookies and Similar Technologies</h2>
-        <p>We may use cookies for authentication, security, preferences, analytics, and, where permitted, advertising activities. You can control cookies through your browser settings.</p>
+        <h2 id="cookies">6. Cookies and Analytics</h2>
+        <p>We use cookies and similar technologies on this website. The table below describes what we use and why.</p>
+
+        <div class="not-prose overflow-x-auto my-6">
+          <table class="w-full text-sm text-slate-600 border-collapse">
+            <thead>
+              <tr class="bg-slate-50">
+                <th class="text-left px-4 py-3 font-semibold text-slate-800 border border-slate-200">Cookie / Service</th>
+                <th class="text-left px-4 py-3 font-semibold text-slate-800 border border-slate-200">Purpose</th>
+                <th class="text-left px-4 py-3 font-semibold text-slate-800 border border-slate-200">Category</th>
+                <th class="text-left px-4 py-3 font-semibold text-slate-800 border border-slate-200">Retention</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-3 border border-slate-200"><code>c360_consent</code></td>
+                <td class="px-4 py-3 border border-slate-200">Stores your cookie consent choice</td>
+                <td class="px-4 py-3 border border-slate-200">Essential</td>
+                <td class="px-4 py-3 border border-slate-200">Persistent (localStorage)</td>
+              </tr>
+              <tr class="bg-slate-50">
+                <td class="px-4 py-3 border border-slate-200"><code>_ga</code>, <code>_ga_*</code></td>
+                <td class="px-4 py-3 border border-slate-200">Google Analytics 4 — distinguishes users, measures page views and engagement</td>
+                <td class="px-4 py-3 border border-slate-200">Analytics (opt-in)</td>
+                <td class="px-4 py-3 border border-slate-200">2 years</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 border border-slate-200">Google Tag Manager</td>
+                <td class="px-4 py-3 border border-slate-200">Manages analytics tags; respects consent signals</td>
+                <td class="px-4 py-3 border border-slate-200">Analytics (opt-in)</td>
+                <td class="px-4 py-3 border border-slate-200">Session / 2 years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>We use <strong>Google Consent Mode v2</strong>. Analytics cookies are blocked by default and only activated if you accept. If you reject, Google Analytics operates in a cookieless, anonymised mode and no cookies are set. We do not use advertising, retargeting, or social media cookies.</p>
+
+        <p>You can change your cookie preferences at any time using the <strong>Manage Cookies</strong> link in the footer, or by clearing your browser's localStorage for this site.</p>
 
         <h2>7. Disclosure of Information</h2>
-        <p>We may disclose information to cloud hosting providers, identity providers, payment processors, security vendors, analytics vendors, professional advisers, regulators, and business transferees. RePass Cloud does not sell personal information.</p>
+        <p>We may disclose information to cloud hosting providers, identity providers, payment processors, security vendors, analytics vendors (Google LLC), professional advisers, regulators, and business transferees. <strong>RePass Cloud does not sell personal information.</strong></p>
 
         <h2>8. Hosting and International Transfers</h2>
         <p>Australia and New Zealand customers are hosted in Microsoft Azure Australia regions by default. Where information is transferred across borders, we use appropriate safeguards including contractual protections, encryption, and access controls.</p>
+        <p>Google Analytics data is processed by Google LLC and may be stored in the United States. By accepting analytics cookies, you acknowledge this transfer. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a> for details.</p>
 
         <h2>9. Security</h2>
         <p>Security measures include encryption in transit and at rest, role-based access control, multi-factor authentication, audit logging, and incident response procedures.</p>
@@ -101,18 +138,77 @@ import PageLayout from '../layouts/PageLayout.astro';
           <li>Security and telemetry logs: generally 90 to 100 days</li>
           <li>Customer content: per customer instructions and contract terms</li>
           <li>Backups: limited periods as part of backup lifecycle management</li>
+          <li>Analytics data: up to 14 months (Google Analytics default retention)</li>
         </ul>
 
-        <h2>11. Your Rights</h2>
-        <p>Depending on your location, you may have rights to access, rectify, erase, restrict, object to, or port your personal information. To exercise rights, contact <a href="mailto:hello@repasscloud.com">hello@repasscloud.com</a>.</p>
+        <h2>11. Your Rights — All Users</h2>
+        <p>You may have the right to access, rectify, erase, restrict processing of, object to processing of, or port your personal information. To exercise any right, contact <a href="mailto:hello@repasscloud.com">hello@repasscloud.com</a>. We will respond within 30 days.</p>
 
-        <h2>12. Children's Privacy</h2>
+        <h2>12. EU and UK Residents — GDPR / UK GDPR</h2>
+        <p>If you are located in the European Economic Area (EEA) or the United Kingdom, the General Data Protection Regulation (GDPR) or UK GDPR applies to how we handle your personal data.</p>
+        <ul>
+          <li><strong>Right to access</strong> — request a copy of personal data we hold about you</li>
+          <li><strong>Right to rectification</strong> — request correction of inaccurate data</li>
+          <li><strong>Right to erasure</strong> — request deletion of your personal data, subject to legal obligations</li>
+          <li><strong>Right to restrict processing</strong> — request that we limit how we use your data</li>
+          <li><strong>Right to data portability</strong> — receive your data in a structured, machine-readable format</li>
+          <li><strong>Right to object</strong> — object to processing based on legitimate interests</li>
+          <li><strong>Right to withdraw consent</strong> — withdraw cookie or marketing consent at any time without penalty</li>
+        </ul>
+        <p>Analytics cookies require your explicit consent before they fire. You can withdraw consent at any time via the <strong>Manage Cookies</strong> link in the footer.</p>
+        <p>If you believe we have not handled your data correctly, you have the right to lodge a complaint with your local supervisory authority (e.g., the ICO in the UK, or your national data protection authority in the EU).</p>
+
+        <h2>13. Australian Residents — Privacy Act 1988</h2>
+        <p>RePass Cloud Pty Ltd is an Australian company subject to the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs).</p>
+        <ul>
+          <li>You may request access to personal information we hold about you (APP 12)</li>
+          <li>You may request correction of personal information that is inaccurate, out of date, incomplete, irrelevant, or misleading (APP 13)</li>
+          <li>If you are dissatisfied with our handling of a privacy complaint, you may complain to the <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">Office of the Australian Information Commissioner (OAIC)</a></li>
+        </ul>
+        <p>To make a request or complaint, contact <a href="mailto:hello@repasscloud.com">hello@repasscloud.com</a>.</p>
+
+        <h2>14. California Residents — CCPA / CPRA</h2>
+        <p>If you are a California resident, the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) grant you the following rights:</p>
+        <ul>
+          <li><strong>Right to know</strong> — the categories and specific pieces of personal information collected about you</li>
+          <li><strong>Right to delete</strong> — request deletion of personal information we have collected, subject to exceptions</li>
+          <li><strong>Right to correct</strong> — request correction of inaccurate personal information</li>
+          <li><strong>Right to opt out of sale or sharing</strong> — we do not sell personal information; however, use of Google Analytics may constitute "sharing" under CCPA. You may opt out at any time</li>
+          <li><strong>Right to limit use of sensitive personal information</strong></li>
+          <li><strong>Right to non-discrimination</strong> — we will not discriminate against you for exercising your rights</li>
+        </ul>
+
+        <p class="not-prose flex items-center gap-2 text-sm text-slate-600 my-4">
+          <img src="/images/privacyoptions29x14.png" alt="Privacy options" width="29" height="14" />
+          <span>
+            To exercise your right to opt out of the sale or sharing of personal information, click
+            <button
+              onclick="window.c360OpenCookieBanner && window.c360OpenCookieBanner()"
+              class="text-sky-600 underline cursor-pointer bg-transparent border-none p-0 font-inherit text-inherit"
+            >
+              Your Privacy Choices
+            </button>
+            or use the <strong>Manage Cookies</strong> link in the footer of any page.
+          </span>
+        </p>
+
+        <p>To submit a CCPA request by email: <a href="mailto:hello@repasscloud.com">hello@repasscloud.com</a>. We will verify your identity and respond within 45 days, with a possible 45-day extension where reasonably necessary.</p>
+
+        <p><strong>Categories of personal information collected (past 12 months):</strong></p>
+        <ul>
+          <li>Identifiers (name, email address, IP address)</li>
+          <li>Internet or electronic network activity (page views, session data via Google Analytics — only if consented)</li>
+          <li>Commercial information (if you engage with our services)</li>
+        </ul>
+        <p><strong>We do not sell personal information.</strong> We do not knowingly collect personal information from consumers under 16 years of age.</p>
+
+        <h2>15. Children's Privacy</h2>
         <p>Cinturon360 is not intended for children under 18. We do not knowingly collect personal information from children.</p>
 
-        <h2>13. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top indicates when it was last revised.</p>
+        <h2>16. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top indicates when it was last revised. Continued use of the Services after changes constitutes acceptance.</p>
 
-        <h2>14. Contact Us</h2>
+        <h2>17. Contact Us</h2>
         <p>
           <strong>RePass Cloud Pty Ltd</strong><br />
           PO BOX 262, Bondi Junction NSW 1355, Australia<br />

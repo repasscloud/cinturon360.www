@@ -1,11 +1,20 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import WaitlistForm from '../components/sections/WaitlistForm.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Join the Cinturon360 Waitlist',
+  url: 'https://cinturon360.com/waitlist',
+  description: 'Get early access to Cinturon360 — the all-in-one travel management platform for TMCs, corporates, leisure, and consumers.',
+};
 ---
 
 <PageLayout
   title="Join the Waitlist"
   description="Get early access to Cinturon360 — the modern operating layer for travel management companies. Join the waitlist today."
+  schema={schema}
 >
 
   <!-- Full-page dark layout -->

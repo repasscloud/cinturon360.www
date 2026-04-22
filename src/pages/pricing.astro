@@ -1,26 +1,54 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Pricing — Cinturon360',
+  url: 'https://cinturon360.com/pricing',
+  description: 'Flexible commercial models for TMCs, corporates, and managed travel programs — custom pricing based on your operation, not fixed tiers.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360',
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'AUD',
+      description: 'Custom pricing based on your operation. Contact for commercial details.',
+    },
+  },
+};
 ---
 
 <PageLayout
   title="Pricing"
   description="Cinturon360 pricing is built around how you use the platform — not a fixed tier that doesn't fit your operation. Custom commercial models for TMCs, corporates, and managed travel programs."
+  schema={schema}
 >
   <!-- Hero -->
-  <div class="pt-32 pb-16 bg-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
-        Pricing
-      </span>
-      <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-        Pricing that reflects how you use the platform
-      </h1>
-      <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-        No two TMC operations are the same. A boutique TMC with ten clients and a national TMC managing thousands of travellers need completely different commercial structures — so that's what we build.
-      </p>
+  <section
+    class="relative overflow-hidden pt-32 pb-20 md:pb-24"
+    style="background: var(--c360-dark);"
+  >
+    <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>
+    <div class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: #f97316;"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="flex justify-center mb-8">
+          <span class="hero-badge">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+            Pricing
+          </span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Pricing that reflects how you use the platform.
+        </h1>
+        <p class="text-xl max-w-2xl mx-auto leading-relaxed" style="color: rgba(248,250,252,0.65);">
+          No two TMC operations are the same. A boutique TMC with ten clients and a national TMC managing thousands of travellers need completely different commercial structures — so that's what we build.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- Why custom -->
   <section class="section bg-slate-50">

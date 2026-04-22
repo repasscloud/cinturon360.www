@@ -72,9 +72,8 @@ const socialLinks = [
           {socialLinks.map((link) => (
             <a href={link.href} target="_blank" rel="noopener noreferrer"
               aria-label={link.label}
-              class="w-8 h-8 flex items-center justify-center rounded-lg transition-all hover:bg-white/10"
-              style="color: rgba(248,250,252,0.4);">
-              <img src={link.icon} alt={link.label} class="w-4 h-4 opacity-50 hover:opacity-100 transition-opacity" />
+              class="w-8 h-8 flex items-center justify-center rounded-lg transition-all hover:bg-white/10 group">
+              <img src={link.icon} alt={link.label} class="w-4 h-4 transition-opacity opacity-40 group-hover:opacity-90" style="filter: brightness(0) invert(1);" />
             </a>
           ))}
         </div>
@@ -171,21 +170,35 @@ const socialLinks = [
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
       style="border-top: 1px solid rgba(255,255,255,0.07);">
       <p class="text-xs" style="color: rgba(248,250,252,0.3);">
-        © {new Date().getFullYear()} Cinturon360 — a product by
+        © {new Date().getFullYear()} Cinturon360 by
         <a href="https://repasscloud.com" target="_blank" rel="noopener noreferrer"
           class="transition-colors hover:text-white"
           style="color: rgba(248,250,252,0.5);">
           RePass Cloud Pty Ltd
         </a>
-        · ABN registered · Sydney, AU
       </p>
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <!-- CCPA opt-out icon link — always visible per California law -->
+        <button
+          onclick="window.c360OpenCookieBanner && window.c360OpenCookieBanner()"
+          aria-label="Your Privacy Choices — Do Not Sell or Share My Personal Information"
+          style="display:inline-flex; align-items:center; gap:0.375rem; background:none; border:none; cursor:pointer; color:rgba(248,250,252,0.35); font-size:0.75rem; padding:0; transition:color 0.15s;"
+          onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'"
+        >
+          <img src="/images/privacyoptions29x14.png" alt="Privacy options" width="29" height="14" />
+          Your Privacy Choices
+        </button>
+        <!-- <span style="color:rgba(248,250,252,0.15); font-size:0.75rem;" aria-hidden="true">·</span> -->
+        <!-- <button
+          onclick="window.c360OpenCookieBanner && window.c360OpenCookieBanner()"
+          style="background:none; border:none; cursor:pointer; font-size:0.75rem; padding:0; transition:color 0.15s; color:rgba(248,250,252,0.35);"
+          onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'"
+        >
+          Manage Cookies
+        </button> -->
+      </div>
       <p class="text-xs" style="color: rgba(248,250,252,0.25);">
-        Made with ❤️ in Sydney, AU 🇦🇺 by
-        <a href="https://repasscloud.com" target="_blank" rel="noopener noreferrer"
-          class="transition-colors hover:text-white"
-          style="color: rgba(248,250,252,0.4);">
-          RePass Cloud
-        </a>
+        Made with ❤️ in Sydney, AU 🇦🇺
       </p>
     </div>
   </div>

@@ -1,25 +1,46 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Policy & Approvals — Cinturon360',
+  url: 'https://cinturon360.com/platform/policy-approvals',
+  description: 'Pre-trip approval routing, flexible policy rules, structured exceptions, and full audit trail built into the Cinturon360 core data model.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360 Policy & Approvals Engine',
+    featureList: ['Pre-trip approval routing', 'Policy rule configuration', 'Exception and override handling', 'Immutable audit trail'],
+  },
+};
 ---
 
 <PageLayout
   title="Policy & Approvals"
   description="Cinturon360 routes bookings to the right approvers before spend is committed. Flexible policy rules, structured exceptions, and a full audit trail — built into the core data model."
+  schema={schema}
 >
-  <div class="pt-32 pb-16" style="background: var(--c360-dark);">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+  <section class="relative overflow-hidden pt-32 pb-16" style="background: var(--c360-dark);">
+    <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>
+    <div class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: #f97316;"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
       <div class="max-w-3xl">
-        <span class="section-badge section-badge-primary mb-4">Platform — Policy & Approvals</span>
-        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+        <div class="flex mb-8">
+          <span class="hero-badge">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+            Platform — Policy & Approvals
+          </span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
           Approvals before spend is committed. Every time.
         </h1>
-        <p class="text-xl leading-relaxed" style="color: rgba(248,250,252,0.55);">
+        <p class="text-xl leading-relaxed" style="color: rgba(248,250,252,0.65);">
           Most travel programs have a policy document. Fewer have a policy system. Cinturon360 is the latter — route bookings to the right approvers, enforce rules at the point of booking, and maintain a defensible audit trail for every decision.
         </p>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Problem -->
   <section class="section bg-white">

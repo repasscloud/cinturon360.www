@@ -1,17 +1,29 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Cinturon360 for Corporate Travel Programs',
+  url: 'https://cinturon360.com/for-corporates',
+  description: 'Pre-trip approvals, policy enforcement, and finance-grade spend visibility for CFOs, travel managers, and procurement teams.',
+  audience: { '@type': 'Audience', audienceType: 'Corporate Travel Managers and CFOs' },
+  provider: { '@type': 'Organization', name: 'Cinturon360' },
+  serviceType: 'Corporate Travel Management',
+};
 ---
 
 <PageLayout
   title="For Corporate Travel Programs"
   description="Cinturon360 gives CFOs, travel managers, and procurement teams pre-trip approvals, policy enforcement, and finance-grade spend visibility — without changing how they book."
+  schema={schema}
 >
 
   <!-- Hero -->
   <section
-    class="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32"
-    style="background: linear-gradient(to bottom, #0f172a, #1e293b);"
+    class="relative overflow-hidden pt-32 pb-20 md:pb-24"
+    style="background: var(--c360-dark);"
   >
     <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #a855f7;"></div>
     <div class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>

@@ -1,25 +1,46 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Performance & Scale — Cinturon360',
+  url: 'https://cinturon360.com/platform/performance-scale',
+  description: 'Cloud-native infrastructure built to scale from boutique travel agencies to high-volume enterprise programs — APAC-hosted, globally architected.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360 Infrastructure',
+    featureList: ['Cloud-native architecture', 'Enterprise-grade scale', 'APAC-hosted with global deployment', 'High-availability design'],
+  },
+};
 ---
 
 <PageLayout
   title="Performance & Scale"
   description="Cinturon360 is built on cloud-native infrastructure designed to scale with TMC operations — from boutique agencies to high-volume enterprise programs. APAC-hosted, globally architected."
+  schema={schema}
 >
-  <div class="pt-32 pb-16" style="background: var(--c360-dark);">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+  <section class="relative overflow-hidden pt-32 pb-16" style="background: var(--c360-dark);">
+    <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>
+    <div class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: #f97316;"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
       <div class="max-w-3xl">
-        <span class="section-badge section-badge-primary mb-4">Platform — Performance & Scale</span>
-        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+        <div class="flex mb-8">
+          <span class="hero-badge">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+            Platform — Performance & Scale
+          </span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
           Built to scale with your operation.
         </h1>
-        <p class="text-xl leading-relaxed" style="color: rgba(248,250,252,0.55);">
+        <p class="text-xl leading-relaxed" style="color: rgba(248,250,252,0.65);">
           Cinturon360 runs on cloud-native infrastructure that scales with booking volume, client growth, and integration complexity — without requiring a re-platform as your business grows.
         </p>
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="section bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

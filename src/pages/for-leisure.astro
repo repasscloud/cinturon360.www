@@ -1,17 +1,29 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Cinturon360 for Leisure and High-Net-Worth Travel',
+  url: 'https://cinturon360.com/for-leisure',
+  description: 'Structured governance and visibility for premium leisure travel — approval workflows, spend oversight, and audit trails for travel advisors managing discerning clients.',
+  audience: { '@type': 'Audience', audienceType: 'Leisure Travel Advisors and High-Net-Worth Travellers' },
+  provider: { '@type': 'Organization', name: 'Cinturon360' },
+  serviceType: 'Leisure Travel Management',
+};
 ---
 
 <PageLayout
   title="For Leisure & High-Net-Worth Travel"
   description="Cinturon360 brings structured governance and visibility to premium leisure travel programs — approval workflows, spend oversight, and audit trails for travel advisors managing discerning clients."
+  schema={schema}
 >
 
   <!-- Hero -->
   <section
-    class="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32"
-    style="background: linear-gradient(to bottom, #0f172a, #1e293b);"
+    class="relative overflow-hidden pt-32 pb-20 md:pb-24"
+    style="background: var(--c360-dark);"
   >
     <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #f97316;"></div>
     <div class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>
