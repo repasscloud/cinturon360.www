@@ -1,0 +1,115 @@
+---
+const segments = [
+  {
+    icon: '🏢',
+    title: 'Travel Management Companies',
+    label: 'Primary audience',
+    labelColor: '#38bdf8',
+    description:
+      'Cinturon360 is built for TMCs first. Replace Tramada and legacy mid-office tools with a modern platform for client management, workflow automation, GDS/NDC integration, and finance-grade reporting.',
+    href: '/for-tmcs',
+    tags: ['Tramada replacement', 'Client automation', 'Multi-client scale'],
+    accentColor: '#38bdf8',
+    bgAccent: 'rgba(56,189,248,0.08)',
+    borderAccent: 'rgba(56,189,248,0.2)',
+    ctaLabel: 'For TMCs →',
+  },
+  {
+    icon: '💼',
+    title: 'Corporate Travel Programs',
+    label: 'CFOs & Travel Managers',
+    labelColor: '#a78bfa',
+    description:
+      'Full visibility over every dollar spent on travel. Pre-trip approvals, policy enforcement at booking, and CFO-ready reporting — without changing your TMC relationship or booking channel.',
+    href: '/for-corporates',
+    tags: ['Pre-trip approvals', 'Spend visibility', 'Policy enforcement'],
+    accentColor: '#a78bfa',
+    bgAccent: 'rgba(167,139,250,0.08)',
+    borderAccent: 'rgba(167,139,250,0.2)',
+    ctaLabel: 'For Corporates →',
+  },
+  {
+    icon: '🏛️',
+    title: 'Government & Controlled Environments',
+    label: 'Audit-grade governance',
+    labelColor: '#10b981',
+    description:
+      'Structured approvals, defensible audit trails, and compliance reporting for travel programs operating under strict accountability and regulatory requirements.',
+    href: '/for-corporates',
+    tags: ['Defensible records', 'Structured governance', 'Audit trail'],
+    accentColor: '#10b981',
+    bgAccent: 'rgba(16,185,129,0.08)',
+    borderAccent: 'rgba(16,185,129,0.2)',
+    ctaLabel: 'For Government →',
+  },
+  {
+    icon: '✈️',
+    title: 'Leisure & High-Net-Worth Travel',
+    label: 'Premium programs',
+    labelColor: '#f97316',
+    description:
+      'Precision oversight for premium leisure programs. Governance and visibility tools for travel advisors managing HNW clients who expect discretion, quality, and accountability.',
+    href: '/for-leisure',
+    tags: ['Premium programs', 'HNW clients', 'Advisor tools'],
+    accentColor: '#f97316',
+    bgAccent: 'rgba(249,115,22,0.08)',
+    borderAccent: 'rgba(249,115,22,0.2)',
+    ctaLabel: 'For Leisure →',
+  },
+];
+---
+
+<section class="section bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div class="text-center mb-14">
+      <span class="section-badge section-badge-primary">Who we serve</span>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+        One platform.<br class="hidden md:block" />
+        <span style="color: var(--c360-primary);">Every tier of managed travel.</span>
+      </h2>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">
+        TMCs run on Cinturon360. Their corporate, government, and leisure clients benefit from it.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {segments.map((seg) => (
+        <a href={seg.href}
+          class="group block rounded-2xl p-6 border transition-all duration-200"
+          style={`background: ${seg.bgAccent}; border-color: ${seg.borderAccent};`}
+        >
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+              style={`background: ${seg.bgAccent.replace('0.08', '0.15')};`}>
+              {seg.icon}
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-semibold px-2 py-0.5 rounded-full"
+                  style={`background: ${seg.bgAccent.replace('0.08', '0.2')}; color: ${seg.accentColor};`}>
+                  {seg.label}
+                </span>
+              </div>
+              <h3 class="font-heading text-lg font-bold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors">
+                {seg.title}
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                {seg.description}
+              </p>
+              <div class="flex flex-wrap gap-2 mb-3">
+                {seg.tags.map((tag) => (
+                  <span class="text-xs px-2.5 py-1 rounded-full bg-white border border-slate-100 text-slate-500">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <span class="text-sm font-semibold transition-colors" style={`color: ${seg.accentColor};`}>
+                {seg.ctaLabel}
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  href?: string;
+  icon?: string;
+  badgeText?: string;
+  badgeColor?: 'sky' | 'orange' | 'emerald' | 'purple' | 'slate';
+  class?: string;
+}
+
+const {
+  title,
+  description,
+  href,
+  icon,
+  badgeText,
+  badgeColor = 'sky',
+  class: className = '',
+} = Astro.props;
+
+const badgeColorClasses = {
+  sky: 'bg-sky-100 text-sky-700',
+  orange: 'bg-orange-100 text-orange-700',
+  emerald: 'bg-emerald-100 text-emerald-700',
+  purple: 'bg-purple-100 text-purple-700',
+  slate: 'bg-slate-100 text-slate-600',
+};
+
+const iconBgClasses = {
+  sky: 'bg-sky-50 text-sky-600',
+  orange: 'bg-orange-50 text-orange-600',
+  emerald: 'bg-emerald-50 text-emerald-600',
+  purple: 'bg-purple-50 text-purple-600',
+  slate: 'bg-slate-50 text-slate-600',
+};
+---
+
+<div class={`card ${className}`}>
+  {icon && (
+    <div class={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-xl ${iconBgClasses[badgeColor]}`}>
+      {icon}
+    </div>
+  )}
+  {badgeText && (
+    <span class={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium mb-3 ${badgeColorClasses[badgeColor]}`}>
+      {badgeText}
+    </span>
+  )}
+  {title && (
+    <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">{title}</h3>
+  )}
+  {description && (
+    <p class="text-sm text-slate-600 leading-relaxed">{description}</p>
+  )}
+  <slot />
+  {href && (
+    <a
+      href={href}
+      class="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700 mt-4 transition-colors"
+    >
+      Learn more
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  )}
+</div>

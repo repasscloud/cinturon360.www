@@ -1,0 +1,24 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="Sign In" noIndex={true}>
+  <div class="pt-24 pb-16 bg-white min-h-screen flex items-center">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-md text-center">
+      <a href="/" class="inline-flex items-center gap-2 mb-8">
+        <img src="/images/logo.svg" alt="Cinturon360" class="h-8 w-auto" />
+        <span class="font-heading font-bold text-lg">
+          <span style="color: #38bdf8;">Cinturon</span><span style="color: #f97316;">360</span>
+        </span>
+      </a>
+      <h1 class="font-heading text-3xl font-bold text-slate-900 mb-4">Sign in</h1>
+      <p class="text-slate-600 mb-8">
+        Cinturon360 is currently in development. The platform is not yet available for sign in.
+      </p>
+      <div class="flex flex-col gap-3">
+        <a href="/waitlist" class="btn-primary w-full text-center">Join the Waitlist</a>
+        <a href="/contact" class="btn-secondary w-full text-center">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</PageLayout>

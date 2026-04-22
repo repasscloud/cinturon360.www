@@ -1,0 +1,192 @@
+---
+const platformLinks = [
+  { label: 'Policy & Approvals', href: '/platform/policy-approvals' },
+  { label: 'Integrations', href: '/platform/integrations' },
+  { label: 'TMC Operations', href: '/platform/tmc-operations' },
+  { label: 'Reporting & Visibility', href: '/platform/reporting-visibility' },
+  { label: 'Performance & Scale', href: '/platform/performance-scale' },
+  { label: 'Developer Experience', href: '/platform/developer-experience' },
+];
+
+const audienceLinks = [
+  { label: 'For TMCs', href: '/for-tmcs' },
+  { label: 'For Corporates', href: '/for-corporates' },
+  { label: 'For Leisure & HNW', href: '/for-leisure' },
+  { label: 'Pricing', href: '/pricing' },
+];
+
+const companyLinks = [
+  { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Investors', href: '/investors' },
+  { label: 'Careers', href: '/careers' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const legalLinks = [
+  { label: 'Privacy Policy', href: '/privacy' },
+];
+
+const socialLinks = [
+  {
+    label: 'LinkedIn',
+    href: 'https://linkedin.com/in/repasscloud',
+    icon: '/images/social/linkedin.svg',
+  },
+  {
+    label: 'Twitter',
+    href: 'https://twitter.com/repasscloud',
+    icon: '/images/social/twitter.svg',
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/repasscloud',
+    icon: '/images/social/github.svg',
+  },
+];
+---
+
+<footer style="background: var(--c360-dark); border-top: 1px solid rgba(255,255,255,0.07);">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-16">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-10 mb-14">
+
+      <!-- Brand col -->
+      <div class="col-span-2 md:col-span-2">
+        <a href="/" class="inline-flex items-center gap-2 mb-4">
+          <span class="font-heading font-extrabold text-xl tracking-tight">
+            <span style="color: #38bdf8;">Cinturon</span><span style="color: #f97316;">360</span>
+          </span>
+        </a>
+        <p class="text-sm leading-relaxed mb-5" style="color: rgba(248,250,252,0.45);">
+          The modern operating layer for travel management companies and the clients they serve. APAC-first. Globally scalable.
+        </p>
+        <div class="flex items-center gap-2 mb-5">
+          <span class="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full"
+            style="background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.2); color: #38bdf8;">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+            In development
+          </span>
+        </div>
+        <!-- Social -->
+        <div class="flex items-center gap-2">
+          {socialLinks.map((link) => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer"
+              aria-label={link.label}
+              class="w-8 h-8 flex items-center justify-center rounded-lg transition-all hover:bg-white/10"
+              style="color: rgba(248,250,252,0.4);">
+              <img src={link.icon} alt={link.label} class="w-4 h-4 opacity-50 hover:opacity-100 transition-opacity" />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Platform -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(248,250,252,0.3);">
+          Platform
+        </h3>
+        <ul class="space-y-2.5">
+          {platformLinks.map((link) => (
+            <li>
+              <a href={link.href}
+                class="text-sm transition-colors hover:text-white"
+                style="color: rgba(248,250,252,0.5);">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Who We Serve -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(248,250,252,0.3);">
+          Who We Serve
+        </h3>
+        <ul class="space-y-2.5">
+          {audienceLinks.map((link) => (
+            <li>
+              <a href={link.href}
+                class="text-sm transition-colors hover:text-white"
+                style="color: rgba(248,250,252,0.5);">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(248,250,252,0.3);">
+          Company
+        </h3>
+        <ul class="space-y-2.5">
+          {companyLinks.map((link) => (
+            <li>
+              <a href={link.href}
+                class="text-sm transition-colors hover:text-white"
+                style="color: rgba(248,250,252,0.5);">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Legal + API -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(248,250,252,0.3);">
+          Legal & Dev
+        </h3>
+        <ul class="space-y-2.5">
+          {legalLinks.map((link) => (
+            <li>
+              <a href={link.href}
+                class="text-sm transition-colors hover:text-white"
+                style="color: rgba(248,250,252,0.5);">
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href="/api"
+              class="text-sm transition-colors hover:text-white"
+              style="color: rgba(248,250,252,0.5);">
+              API
+            </a>
+          </li>
+          <li>
+            <a href="/waitlist"
+              class="text-sm transition-colors"
+              style="color: #38bdf8;">
+              Join Waitlist ↗
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+      style="border-top: 1px solid rgba(255,255,255,0.07);">
+      <p class="text-xs" style="color: rgba(248,250,252,0.3);">
+        © {new Date().getFullYear()} Cinturon360 — a product by
+        <a href="https://repasscloud.com" target="_blank" rel="noopener noreferrer"
+          class="transition-colors hover:text-white"
+          style="color: rgba(248,250,252,0.5);">
+          RePass Cloud Pty Ltd
+        </a>
+        · ABN registered · Sydney, AU
+      </p>
+      <p class="text-xs" style="color: rgba(248,250,252,0.25);">
+        Made with ❤️ in Sydney, AU 🇦🇺 by
+        <a href="https://repasscloud.com" target="_blank" rel="noopener noreferrer"
+          class="transition-colors hover:text-white"
+          style="color: rgba(248,250,252,0.4);">
+          RePass Cloud
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

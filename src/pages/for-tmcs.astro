@@ -1,0 +1,310 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="For Travel Management Companies"
+  description="Cinturon360 is built TMC-first. Replace Tramada and legacy mid-office tools with a modern platform for client management, automation, policy, integrations, and finance-grade reporting."
+>
+
+  <!-- Hero -->
+  <section
+    class="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32"
+    style="background: var(--c360-dark);"
+  >
+    <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>
+    <div class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none" style="background: #f97316;"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="flex justify-center mb-8">
+          <span class="hero-badge">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+            Built for TMCs
+          </span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Built for how TMCs<br />actually operate.
+        </h1>
+        <p class="text-lg md:text-xl mb-4 max-w-3xl mx-auto leading-relaxed" style="color: rgba(248,250,252,0.55);">
+          Cinturon360 is a TMC-first platform that replaces legacy back-office complexity with modern automation, governance, and visibility — without disrupting your existing booking channels or supplier relationships.
+        </p>
+        <p class="text-sm text-slate-400 mb-10">
+          Replaces Tramada. Works alongside GDS, NDC, and direct suppliers. No rip-and-replace.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn-primary text-base px-8 py-4">
+            Book a Conversation
+          </a>
+          <a href="/waitlist" class="btn-outline text-base px-8 py-4">
+            Join Waitlist
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain points -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="text-center mb-16">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+          The problem
+        </span>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          What a TMC's day looks like without <span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span>
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          Legacy tools were built for a different era. The gap between what TMCs need and what their software delivers has never been wider.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            title: 'Manual client onboarding',
+            body: 'Every new client means another bespoke spreadsheet, manual setup, and phone calls. No repeatable process. No scalable playbook.',
+          },
+          {
+            title: 'Approvals stuck in email',
+            body: 'Travel gets booked before anyone approves it. Finance only finds out at invoice time. There\'s no system of record for who approved what.',
+          },
+          {
+            title: 'Reporting built in Excel',
+            body: 'Someone spends two days each month compiling a spend report that\'s already out of date by the time it reaches the client.',
+          },
+          {
+            title: 'Policy enforcement is theoretical',
+            body: 'The policy document exists. Nobody follows it consistently. There\'s no way to prove compliance to a client or regulator.',
+          },
+          {
+            title: 'Integration is a project, not a feature',
+            body: 'Connecting a new GDS, NDC feed, or supplier requires custom development. Every client configuration is different and fragile.',
+          },
+          {
+            title: 'Scaling means hiring, not automating',
+            body: 'As client volume grows, headcount grows with it. There\'s no platform leverage — just more people doing the same manual work.',
+          },
+        ].map((item) => (
+          <div class="rounded-xl p-6 border border-slate-100 bg-slate-50">
+            <div class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-2 h-2 rounded-full mt-2 bg-orange-400"></span>
+              <div>
+                <h3 class="font-heading font-semibold text-slate-900 mb-2">{item.title}</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What Cinturon360 delivers -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="text-center mb-16">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+          Platform capabilities
+        </span>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          What TMCs get with <span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span>
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          Not a point solution for one problem. A platform that handles the operations layer so your team can focus on clients, not administration.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[
+          {
+            icon: '⚙️',
+            title: 'Automated client onboarding',
+            body: 'Repeatable, configurable onboarding workflows for every new corporate client. Policy rules, approval chains, cost centre mapping, and reporting templates — set up once, deployed consistently.',
+            link: '/platform/tmc-operations',
+          },
+          {
+            icon: '🛡️',
+            title: 'Policy and approval engine',
+            body: 'Define rules by entity, traveller, cost centre, destination, supplier, fare cap, or exception type. Route to the right approvers before spend is committed. Full audit trail, always.',
+            link: '/platform/policy-approvals',
+          },
+          {
+            icon: '🔗',
+            title: 'Integration layer — no rip-and-replace',
+            body: 'Cinturon360 connects to GDS (Amadeus, Sabre, Travelport), NDC feeds (Duffel, AirGateway), and direct suppliers. Your booking channels stay exactly where they are.',
+            link: '/platform/integrations',
+          },
+          {
+            icon: '📊',
+            title: 'Finance-grade reporting',
+            body: 'Real-time spend visibility by client, cost centre, segment, and traveller. Compliance reporting ready for client review, internal audit, or board presentation.',
+            link: '/platform/reporting-visibility',
+          },
+          {
+            icon: '🔄',
+            title: 'Mid-office workflow automation',
+            body: 'Booking intake, quality control, exception handling, and client notifications — all automated. Replace manual mid-office tasks with configurable workflow logic.',
+            link: '/platform/tmc-operations',
+          },
+          {
+            icon: '📈',
+            title: 'Scale without headcount',
+            body: 'Take on more clients without proportionally growing your ops team. Platform leverage means the work done for one client configuration lifts every client that follows.',
+            link: '/platform/performance-scale',
+          },
+        ].map((item) => (
+          <div class="card flex flex-col group">
+            <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-xl mb-4">{item.icon}</div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-4">{item.body}</p>
+            <a href={item.link} class="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors mt-auto">
+              Learn more
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Tramada replacement -->
+  <section class="section" style="background: #0f172a;">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium mb-4"
+            style="background: rgba(249,115,22,0.15); color: #f97316;">
+            Tramada alternative
+          </span>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+            A modern replacement for legacy mid-office
+          </h2>
+          <p class="text-slate-400 text-lg leading-relaxed">
+            Tramada has served the industry well. But it was built for a different era — before NDC, before cloud-native platforms, before the modern compliance bar. Cinturon360 is what comes next.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div class="rounded-xl p-6" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(249,115,22,0.2);">
+            <h3 class="font-heading font-semibold text-orange-400 mb-4">Legacy mid-office (Tramada)</h3>
+            <ul class="space-y-3">
+              {[
+                'On-premise or dated cloud infrastructure',
+                'Manual configuration for each client',
+                'Limited NDC and modern supplier connectivity',
+                'Reporting requires custom exports and Excel',
+                'Expensive to customise, slow to update',
+                'Approval workflows bolted on or absent',
+              ].map((item) => (
+                <li class="flex items-start gap-2 text-sm text-slate-400">
+                  <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="rounded-xl p-6" style="background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.2);">
+            <h3 class="font-heading font-semibold mb-4"><span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span></h3>
+            <ul class="space-y-3">
+              {[
+                'Cloud-native, APAC-hosted, globally scalable',
+                'Repeatable client onboarding via configuration',
+                'Native GDS, NDC, and direct supplier connectivity',
+                'Real-time reporting, no exports required',
+                'API-first, continuously updated',
+                'Approval workflows built into the core data model',
+              ].map((item) => (
+                <li class="flex items-start gap-2 text-sm text-slate-300">
+                  <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-center text-slate-500 text-sm">
+          Migration support and parallel-run capability available for TMCs transitioning from Tramada.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-700 mb-4">
+          Integrations
+        </span>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          Works with the ecosystem you already use
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+          No forced migrations. Cinturon360 connects to your existing GDS, NDC, and supplier relationships — adding governance and visibility on top of what's already working.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        {[
+          { name: 'Amadeus', type: 'GDS' },
+          { name: 'Sabre', type: 'GDS' },
+          { name: 'Travelport', type: 'GDS' },
+          { name: 'Duffel', type: 'NDC' },
+          { name: 'AirGateway', type: 'NDC' },
+          { name: 'Direct Suppliers', type: 'API' },
+          { name: 'Expense Platforms', type: 'ERP' },
+          { name: 'Custom Connectors', type: 'API' },
+        ].map((item) => (
+          <div class="rounded-xl p-4 text-center border border-slate-100 bg-slate-50">
+            <p class="font-semibold text-slate-800 text-sm">{item.name}</p>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-slate-200 text-slate-600 mt-1">{item.type}</span>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center">
+        <a href="/platform/integrations" class="inline-flex items-center gap-2 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors">
+          View full integrations documentation
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing note -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+          Pricing built around your operation
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          No two TMCs operate the same way. Cinturon360 pricing is a custom model built around your client volume, workflow complexity, and commercial requirements. There's no off-the-shelf tier that fits a TMC operation — so we don't pretend there is.
+        </p>
+        <a href="/pricing" class="inline-flex items-center gap-2 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors">
+          How pricing works →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Ready to modernise your TMC operations?"
+    description="Join the waitlist or book a conversation with the team. We're working with early design partners now — TMCs that want to shape the platform."
+    primaryCTA={{ label: 'Book a Conversation', href: '/contact' }}
+    secondaryCTA={{ label: 'Join Waitlist', href: '/waitlist' }}
+  />
+
+</PageLayout>

@@ -1,0 +1,86 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="Performance & Scale"
+  description="Cinturon360 is built on cloud-native infrastructure designed to scale with TMC operations — from boutique agencies to high-volume enterprise programs. APAC-hosted, globally architected."
+>
+  <div class="pt-32 pb-16" style="background: var(--c360-dark);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-3xl">
+        <span class="section-badge section-badge-primary mb-4">Platform — Performance & Scale</span>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+          Built to scale with your operation.
+        </h1>
+        <p class="text-xl leading-relaxed" style="color: rgba(248,250,252,0.55);">
+          Cinturon360 runs on cloud-native infrastructure that scales with booking volume, client growth, and integration complexity — without requiring a re-platform as your business grows.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-slate-900 mb-6">Architecture designed for TMC volume</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Travel management companies don't have predictable booking volumes. A peak period — a school holiday, a major industry event, a government agency travel window — can spike volume dramatically. The platform needs to handle that without manual intervention or degraded performance.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Cinturon360 is built on cloud-native infrastructure (hosted in Australia via Microsoft Azure) with auto-scaling for booking intake, workflow processing, and reporting queries.
+          </p>
+          <div class="space-y-3">
+            {[
+              'Cloud-native architecture — no on-premise components',
+              'Auto-scaling for booking intake and workflow processing',
+              'APAC-hosted (Australia) with global expansion support',
+              'Data residency controls for regulatory compliance',
+              'High-availability design with redundancy across services',
+              'API rate limiting and throttle management for integrations',
+            ].map((item) => (
+              <div class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3 h-3 text-slate-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span class="text-sm text-slate-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Hosted in Australia</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Cinturon360 is hosted on Microsoft Azure in Australia by default. Data residency in Australia means client travel data stays in-region — relevant for Australian government requirements and APAC clients with data sovereignty obligations.
+            </p>
+          </div>
+          <div class="p-6 bg-sky-50 rounded-2xl border border-sky-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Scales from boutique to enterprise</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              The same platform infrastructure handles a boutique TMC managing 20 clients and an enterprise TMC managing thousands of travellers. Commercial models are different. The platform underneath is the same.
+            </p>
+          </div>
+          <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Security and compliance</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Enterprise-grade security controls including role-based access, audit logging, encryption at rest and in transit, and access management for multi-tenant TMC environments. Review the <a href="/privacy" class="text-sky-600 hover:text-sky-700 transition-colors">privacy policy</a> for data handling details.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Infrastructure that grows with your business."
+    description="Talk to the team about how Cinturon360 handles the scale requirements of your TMC operation."
+    primaryCTA={{ label: 'Book a Conversation', href: '/contact' }}
+    secondaryCTA={{ label: 'For TMCs Overview', href: '/for-tmcs' }}
+  />
+</PageLayout>

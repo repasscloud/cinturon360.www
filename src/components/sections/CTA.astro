@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  primaryCTA?: { label: string; href: string };
+  secondaryCTA?: { label: string; href: string };
+}
+
+const {
+  title = 'Ready to replace legacy with modern?',
+  description = 'Cinturon360 is in active development. TMCs and design partners are joining now to shape the platform. Get early access and be first to go live.',
+  primaryCTA = { label: 'Join Waitlist', href: '/waitlist' },
+  secondaryCTA = { label: 'Book a Conversation', href: '/contact' },
+} = Astro.props;
+---
+
+<section class="relative py-20 md:py-28 overflow-hidden" style="background: var(--c360-dark);">
+  <!-- Orbs -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-20 left-1/4 w-[500px] h-[500px] rounded-full"
+      style="background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%);"></div>
+    <div class="absolute -bottom-20 right-1/4 w-[400px] h-[400px] rounded-full"
+      style="background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+        <Fragment set:html={title} />
+      </h2>
+      <p class="text-lg mb-10 leading-relaxed" style="color: rgba(248,250,252,0.55);">
+        {description}
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={primaryCTA.href} class="btn-primary text-sm px-8 py-4">
+          {primaryCTA.label}
+        </a>
+        <a href={secondaryCTA.href} class="btn-outline text-sm px-8 py-4">
+          {secondaryCTA.label}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

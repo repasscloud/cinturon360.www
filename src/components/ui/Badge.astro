@@ -1,0 +1,20 @@
+---
+export interface Props {
+  color?: 'sky' | 'orange' | 'emerald' | 'purple' | 'slate';
+  class?: string;
+}
+
+const { color = 'sky', class: className = '' } = Astro.props;
+
+const colorClasses = {
+  sky: 'bg-sky-100 text-sky-700',
+  orange: 'bg-orange-100 text-orange-700',
+  emerald: 'bg-emerald-100 text-emerald-700',
+  purple: 'bg-purple-100 text-purple-700',
+  slate: 'bg-slate-100 text-slate-600',
+};
+---
+
+<span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${colorClasses[color]} ${className}`}>
+  <slot />
+</span>

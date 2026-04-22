@@ -1,0 +1,84 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="Careers"
+  description="Join the team building Cinturon360, the travel governance platform for modern TMCs and enterprise travel programs."
+>
+  <div class="pt-24 pb-16 bg-gradient-to-b from-blue-50 to-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        Work on something that matters
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        Cinturon360 is an early-stage platform tackling real operational problems in managed travel. We're building seriously.
+      </p>
+    </div>
+  </div>
+
+  <!-- Why work here -->
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <h2 class="font-heading text-3xl font-bold text-slate-900 text-center mb-12">Why work on <span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { icon: '🎯', title: 'Product with clear purpose', description: 'We are solving real operational problems in managed travel — approvals, governance, integrations, policy, reporting. The purpose is clear and the need is genuine.' },
+          { icon: '🏗️', title: 'Build meaningful foundations', description: 'Work on platform engineering problems that matter: approval workflows, business rules, multi-tenant systems, APIs, integrations, and reporting at scale.' },
+          { icon: '🧠', title: 'Small team, real ownership', description: 'A focused environment where technical judgement is valued and your work has direct impact on product direction, architecture, and delivery.' },
+        ].map((item) => (
+          <div class="card text-center">
+            <div class="text-4xl mb-4">{item.icon}</div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- What to expect -->
+  <div class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <h2 class="font-heading text-3xl font-bold text-slate-900 text-center mb-12">What to expect</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { icon: '🌏', title: 'Remote-friendly', description: 'Work from wherever you do your best thinking.' },
+          { icon: '⚙️', title: 'Serious technical work', description: 'Platform and product engineering, APIs, multi-tenant systems, complex business rules, and workflow design.' },
+          { icon: '🚀', title: 'Early-stage impact', description: 'Shape product direction, technical foundations, and delivery model from the ground up.' },
+        ].map((item) => (
+          <div class="card text-center">
+            <div class="text-3xl mb-3">{item.icon}</div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Open positions -->
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <h2 class="font-heading text-3xl font-bold text-slate-900 text-center mb-8">Open positions</h2>
+      <div class="bg-slate-50 rounded-2xl border border-slate-100 p-10 text-center">
+        <p class="text-slate-600 mb-2 text-lg">No active openings at this time.</p>
+        <p class="text-sm text-slate-500 mb-6">
+          Check back from time to time, or reach out to RePass Cloud on LinkedIn to express interest.
+        </p>
+        <a
+          href="https://www.linkedin.com/company/repasscloud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 btn-primary"
+        >
+          <img src="/images/social/linkedin.svg" alt="" class="w-4 h-4" />
+          RePass Cloud on LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <CTA />
+</PageLayout>

@@ -1,0 +1,108 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import CTA from '../../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="TMC Operations"
+  description="Cinturon360 is the operating platform for travel management companies — replacing legacy mid-office tools like Tramada with modern automation, client management, and workflow orchestration."
+>
+  <div class="pt-32 pb-16" style="background: var(--c360-dark);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-3xl">
+        <span class="section-badge section-badge-primary mb-4">Platform — TMC Operations</span>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+          The platform TMCs run. Not the one they tolerate.
+        </h1>
+        <p class="text-xl leading-relaxed" style="color: rgba(248,250,252,0.55);">
+          Cinturon360 is designed from the ground up for travel management company operations — replacing legacy mid-office tools with modern automation, repeatable client configuration, and workflow orchestration built around how TMCs actually work.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+          The problem
+        </span>
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+          TMC operations don't scale on legacy tools
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-4">
+          Tramada, Crosscheck, and legacy mid-office platforms were built for an era before cloud, before NDC, and before the scale expectations of modern TMC operations. Every new client is a custom setup. Every process is manual. Every integration is a project.
+        </p>
+        <p class="text-slate-600 text-lg leading-relaxed">
+          The result: TMC operations teams grow headcount proportionally with client volume. There's no platform leverage — just more people doing the same manual work in a system that doesn't help them.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[
+          {
+            icon: '⚙️',
+            title: 'Automated client onboarding',
+            body: 'Repeatable, configurable onboarding workflows for every new corporate client. Policy rules, approval chains, cost centre mapping, and reporting templates — configured once and deployed consistently. No bespoke spreadsheet for every new account.',
+          },
+          {
+            icon: '🔄',
+            title: 'Mid-office workflow automation',
+            body: 'Booking intake, quality control, exception handling, and client notifications — automated via configurable workflow logic. Replace manual mid-office tasks with a system that runs the process, not a person following a checklist.',
+          },
+          {
+            icon: '👥',
+            title: 'Client portfolio management',
+            body: 'Manage your entire client portfolio from a single operations dashboard. Track policy status, approval backlogs, spend by client, and compliance metrics across your book of business — not client-by-client across separate logins.',
+          },
+          {
+            icon: '📋',
+            title: 'Policy configuration at scale',
+            body: 'Define policy templates once and deploy them across multiple clients. Customise per-client without rebuilding from scratch. Update a policy rule centrally and it propagates correctly — no manual update for each affected client.',
+          },
+          {
+            icon: '📈',
+            title: 'Operational reporting',
+            body: 'TMC-level operational metrics alongside client-facing reporting. Booking volumes, exception rates, approval SLA performance, and integration health — in one place, not assembled from three different system exports.',
+          },
+          {
+            icon: '🔗',
+            title: 'Supplier and integration management',
+            body: 'Manage GDS credentials, NDC feed configurations, and direct supplier connections centrally. When a new supplier comes online or a credential rotates, update it once — not across every client configuration separately.',
+          },
+        ].map((item) => (
+          <div class="card">
+            <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-xl mb-4">{item.icon}</div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Scale -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-4">
+          Scale without proportional headcount
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          The measure of a platform for TMC operations isn't how many clients you can manage with a full team. It's how many clients you can manage when the platform does the repeatable work and your team focuses on the client relationship.
+        </p>
+        <a href="/for-tmcs" class="inline-flex items-center gap-2 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors">
+          See the full TMC overview →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Replace legacy mid-office with something built for today."
+    description="Talk to the team about what Cinturon360 TMC Operations looks like for your business."
+    primaryCTA={{ label: 'Book a Conversation', href: '/contact' }}
+    secondaryCTA={{ label: 'For TMCs Overview', href: '/for-tmcs' }}
+  />
+</PageLayout>

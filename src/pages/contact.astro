@@ -1,0 +1,90 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ContactForm from '../components/sections/ContactForm.astro';
+---
+
+<PageLayout
+  title="Contact"
+  description="Get in touch about Cinturon360 — early access, TMC partnerships, API integrations, and commercial conversations."
+>
+
+  <!-- Dark hero -->
+  <div class="pt-32 pb-12" style="background: var(--c360-dark);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-2xl">
+        <span class="section-badge section-badge-primary">Get in touch</span>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+          Start a conversation.
+        </h1>
+        <p class="text-lg leading-relaxed" style="color: rgba(248,250,252,0.55);">
+          Whether you're a TMC looking to modernise, a corporate travel team exploring options, or an investor — reach out and we'll be in touch quickly.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form area -->
+  <div class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+
+        <!-- Left: sidebar info (2 cols) -->
+        <div class="lg:col-span-2 space-y-6">
+          <div>
+            <h2 class="font-heading text-xl font-bold text-slate-900 mb-4">We welcome enquiries about:</h2>
+            <ul class="space-y-3">
+              {[
+                { icon: '🏢', text: 'TMC onboarding and design partnership' },
+                { icon: '🔗', text: 'API and integration discussions' },
+                { icon: '💼', text: 'Corporate travel program conversations' },
+                { icon: '📈', text: 'Investment and pre-seed round' },
+                { icon: '🤝', text: 'Technology and implementation partnerships' },
+                { icon: '📬', text: 'General enquiries and platform updates' },
+              ].map((item) => (
+                <li class="flex items-start gap-3 text-sm text-slate-600">
+                  <span class="text-base mt-0.5">{item.icon}</span>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t border-slate-100 pt-6">
+            <h3 class="font-heading font-semibold text-slate-800 mb-2">Direct email</h3>
+            <a href="mailto:hello@repasscloud.com"
+              class="text-sm font-medium transition-colors hover:text-sky-700"
+              style="color: var(--c360-primary);">
+              hello@repasscloud.com
+            </a>
+          </div>
+
+          <div class="rounded-xl p-4 border border-slate-100 bg-slate-50">
+            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Based in</p>
+            <p class="text-sm text-slate-700">Sydney, NSW, Australia 🇦🇺</p>
+            <p class="text-xs text-slate-400 mt-1">RePass Cloud Pty Ltd</p>
+          </div>
+
+          <div class="rounded-xl p-4" style="background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15);">
+            <p class="text-xs font-semibold mb-1" style="color: #38bdf8;">Joining the waitlist?</p>
+            <p class="text-sm text-slate-600 mb-3">For early access signups, the waitlist page is the faster route.</p>
+            <a href="/waitlist" class="text-sm font-semibold transition-colors" style="color: var(--c360-primary);">
+              Join Waitlist →
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: form (3 cols) -->
+        <div class="lg:col-span-3">
+          <div class="card p-8">
+            <h2 class="font-heading text-xl font-bold text-slate-900 mb-1">Send us a message</h2>
+            <p class="text-sm text-slate-500 mb-6">We typically respond within one business day.</p>
+            <ContactForm />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</PageLayout>

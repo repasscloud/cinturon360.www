@@ -1,0 +1,140 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="Pricing"
+  description="Cinturon360 pricing is built around how you use the platform — not a fixed tier that doesn't fit your operation. Custom commercial models for TMCs, corporates, and managed travel programs."
+>
+  <!-- Hero -->
+  <div class="pt-32 pb-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+        Pricing
+      </span>
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        Pricing that reflects how you use the platform
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        No two TMC operations are the same. A boutique TMC with ten clients and a national TMC managing thousands of travellers need completely different commercial structures — so that's what we build.
+      </p>
+    </div>
+  </div>
+
+  <!-- Why custom -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+          Why there's no off-the-shelf price
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed">
+          Cinturon360 is a platform for TMC operations — and TMC operations vary enormously in client volume, workflow complexity, integration requirements, and commercial structure. A fixed SaaS tier would either undercharge large operations or price out smaller ones. We don't think that's the right model for how TMCs actually work.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          {
+            icon: '🏢',
+            title: 'TMC operators',
+            scenarios: [
+              'Priced around your managed client portfolio',
+              'Scales with client volume and workflow complexity',
+              'Includes platform support and onboarding',
+              'Commercial flexibility as your client base grows',
+            ],
+          },
+          {
+            icon: '💼',
+            title: 'Corporate programs',
+            scenarios: [
+              'Deployed through or alongside your TMC',
+              'Priced around managed traveller volume',
+              'Policy, approvals, and reporting scope',
+              'Single-entity or multi-entity configurations',
+            ],
+          },
+          {
+            icon: '✈️',
+            title: 'Leisure & HNW programs',
+            scenarios: [
+              'Tailored to program complexity and advisor volume',
+              'Flexible arrangements for boutique advisory practices',
+              'Includes governance and oversight tooling',
+              'White-label options available on request',
+            ],
+          },
+        ].map((tier) => (
+          <div class="card">
+            <div class="text-3xl mb-4">{tier.icon}</div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-4">{tier.title}</h3>
+            <ul class="space-y-2">
+              {tier.scenarios.map((s) => (
+                <li class="flex items-start gap-2 text-sm text-slate-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0 mt-2"></span>
+                  {s}
+                </li>
+              ))}
+            </ul>
+            <a href="/contact" class="inline-flex items-center justify-center w-full mt-6 px-6 py-3 rounded-full font-semibold text-sm border border-sky-400 text-sky-600 hover:bg-sky-50 transition-colors">
+              Discuss your program
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What drives pricing -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-4">
+          What goes into a commercial model
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          When we scope a commercial model together, we look at:
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          'Number of managed clients or travellers',
+          'Workflow complexity and automation requirements',
+          'Integration scope (GDS, NDC, direct suppliers, ERP)',
+          'Reporting and visibility requirements',
+          'Multi-entity or single-entity configuration',
+          'Onboarding and implementation scope',
+          'Support and SLA requirements',
+          'Commercial growth trajectory',
+        ].map((item) => (
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0 mt-2"></span>
+            <span class="text-slate-700 text-sm">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA box -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="max-w-2xl mx-auto bg-white rounded-2xl border border-slate-100 shadow-sm p-8 text-center">
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-3">
+          Ready to talk about your operation?
+        </h2>
+        <p class="text-slate-600 mb-6 leading-relaxed">
+          Cinturon360 is in active development and onboarding design partners now. Reach out to start a conversation about your program and what a commercial model looks like for your situation.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn-primary">Book a Conversation</a>
+          <a href="/waitlist" class="btn-outline !text-slate-700 !border-slate-300 !bg-transparent hover:!bg-slate-100">Join Waitlist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</PageLayout>

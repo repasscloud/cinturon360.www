@@ -1,0 +1,207 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import CTA from '../components/sections/CTA.astro';
+---
+
+<PageLayout
+  title="About Cinturon360"
+  description="Cinturon360 is built by RePass Cloud — a serial founder applying first-principles thinking to a travel industry that's been patching legacy systems for too long. APAC-based, TMC-first, globally scalable."
+>
+
+  <!-- Hero -->
+  <div class="pt-32 pb-20" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-6">
+        About Cinturon360
+      </span>
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6 max-w-3xl mx-auto leading-tight">
+        Built by an operator who asked why travel tech was still stuck in 2005.
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        Cinturon360 is the answer. A modern operating layer for travel management companies — built from first principles, not incremental improvements to a broken status quo.
+      </p>
+    </div>
+  </div>
+
+  <!-- Why it exists -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="max-w-3xl mx-auto">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+          Why we're building this
+        </span>
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-6">
+          The industry has been patching the same problem for decades
+        </h2>
+        <div class="space-y-4 text-slate-600 text-lg leading-relaxed">
+          <p>
+            Travel management companies sit at the centre of a $1.4 trillion global market. They manage booking, policy, compliance, and reporting for thousands of corporate clients. And most of them are doing it with software built before the iPhone existed.
+          </p>
+          <p>
+            Tramada, Crosscheck, legacy mid-office tools — these weren't bad products. They were the right tools for their era. But that era ended. NDC changed distribution. Cloud changed expectations. Compliance requirements moved. The industry patched around the gap instead of rebuilding.
+          </p>
+          <p>
+            Cinturon360 is the rebuild. A platform that treats TMC operations as a first-class design problem — not an afterthought bolted onto a booking tool or expense system built for corporate buyers.
+          </p>
+          <p>
+            We're building this in APAC, where Tramada's dominance makes the opportunity clear, and scaling it globally. No rip-and-replace. No forced migrations. Just a better platform that fits into how TMCs already work — and then makes them better at it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">What we believe</h2>
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+          These aren't aspirational values. They're the constraints we design to.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            icon: '🔄',
+            title: 'No rip-and-replace',
+            body: 'TMCs have supplier relationships, booking channels, and client configurations built over years. We work with what\'s there — connecting to GDS, NDC, and direct suppliers as they are, not as we wish they were.',
+          },
+          {
+            icon: '⚙️',
+            title: 'Operations first',
+            body: 'Every feature starts with how a TMC actually operates — not how a corporate buyer or investor thinks they operate. That distinction matters. It\'s why every other tool in this space gets the details wrong.',
+          },
+          {
+            icon: '📊',
+            title: 'Visibility is a right, not a report',
+            body: 'Finance teams shouldn\'t need to wait for a monthly export to know what was spent. Real-time visibility is a platform feature, not a bolt-on. We build for CFOs, not for compliance theatre.',
+          },
+        ].map((p) => (
+          <div class="card text-center">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-2xl mx-auto mb-4">{p.icon}</div>
+            <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{p.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{p.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we serve -->
+  <section id="who-we-serve" class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">Who <span style="color: var(--c360-primary);">Cinturon</span><span style="color: var(--c360-accent);">360</span> serves</h2>
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+          TMCs are the primary customer. Their corporate, government, and leisure clients are the beneficiaries.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        {[
+          {
+            id: 'tmc', icon: '🏢', color: 'sky', title: 'Travel Management Companies',
+            description: 'The primary design audience. TMCs run Cinturon360 to manage their client portfolio — onboarding, policy, approvals, integrations, reporting, and operational scale.',
+            href: '/for-tmcs',
+          },
+          {
+            id: 'corporate', icon: '💼', color: 'purple', title: 'Corporate Travel Programs',
+            description: 'CFOs, travel managers, and procurement teams get pre-trip approvals, policy enforcement, and finance-grade reporting through their TMC\'s Cinturon360 platform.',
+            href: '/for-corporates',
+          },
+          {
+            id: 'government', icon: '🏛️', color: 'emerald', title: 'Government & Controlled Environments',
+            description: 'Audit-grade governance, structured approvals, and defensible records for travel programs operating under strict accountability requirements.',
+            href: '/for-corporates',
+          },
+          {
+            id: 'leisure', icon: '✈️', color: 'orange', title: 'Leisure & High-Net-Worth',
+            description: 'Structured oversight for premium leisure programs. Governance and visibility tools for advisors managing HNW clients who expect precision and discretion.',
+            href: '/for-leisure',
+          },
+        ].map((seg) => (
+            <div id={seg.id} class="card group">
+              <div class={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4 ${
+                seg.color === 'sky' ? 'bg-sky-50' :
+                seg.color === 'purple' ? 'bg-purple-50' :
+                seg.color === 'emerald' ? 'bg-emerald-50' : 'bg-orange-50'
+              }`}>{seg.icon}</div>
+              <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">{seg.title}</h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">{seg.description}</p>
+              <a href={seg.href} class="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors">
+                Learn more
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+            The team
+          </span>
+          <h2 class="font-heading text-3xl font-bold text-slate-900">Built by RePass Cloud</h2>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 md:p-10">
+          <div class="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 items-start">
+            <div class="flex justify-center md:justify-start">
+              <img
+                src="/images/company/danijeljw.jpeg"
+                alt="Danijel-James Wynyard, Founder"
+                class="w-40 h-40 object-cover rounded-2xl shadow-sm"
+              />
+            </div>
+            <div>
+              <h3 class="font-heading text-2xl font-bold text-slate-900 mb-1">Danijel-James Wynyard</h3>
+              <p class="text-sky-600 font-medium text-sm mb-4">Founder — RePass Cloud Pty Ltd</p>
+              <p class="text-slate-600 mb-3 text-sm leading-relaxed">
+                Serial founder and operator. Danijel has built and scaled software businesses across industries, applying an operator's lens to problems that insiders have stopped noticing — because they've been too close for too long.
+              </p>
+              <p class="text-slate-600 mb-3 text-sm leading-relaxed">
+                Cinturon360 came from a clear observation: the travel industry runs critical commercial operations on infrastructure that would be unacceptable in any other sector. The opportunity to replace it — not patch it — was too obvious to ignore.
+              </p>
+              <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                RePass Cloud Pty Ltd is an Australian company based in Sydney, building for the APAC market first and scaling globally.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/djwynyard/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors"
+              >
+                <img src="/images/social/linkedin.svg" alt="" class="w-4 h-4" />
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 rounded-xl p-5 border border-slate-100 bg-white text-center">
+          <p class="text-slate-500 text-sm">
+            Cinturon360 is in early development. We're building the team as the platform grows.
+            Interested in joining?{' '}
+            <a href="/careers" class="text-sky-600 hover:text-sky-700 transition-colors">See open roles</a>
+            {' '}or{' '}
+            <a href="/contact" class="text-sky-600 hover:text-sky-700 transition-colors">reach out directly</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Want to be part of building this?"
+    description="We're speaking with TMCs, design partners, and investors who see what we see. The window to help shape this platform is open now."
+    primaryCTA={{ label: 'Get in Touch', href: '/contact' }}
+    secondaryCTA={{ label: 'View Investor Info', href: '/investors' }}
+  />
+
+</PageLayout>

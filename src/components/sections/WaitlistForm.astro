@@ -1,0 +1,83 @@
+---
+// Formspree action: xvzwknqb
+// Simplified: first name, email, organisation (optional), interest type
+---
+
+<form
+  action="https://formspree.io/f/xvzwknqb"
+  method="POST"
+  class="space-y-4"
+  id="waitlist-form"
+>
+  <div>
+    <label for="first-name" class="form-label-dark">First name</label>
+    <input
+      type="text"
+      id="first-name"
+      name="first_name"
+      required
+      class="form-input-dark"
+      placeholder="Jane"
+      autocomplete="given-name"
+    />
+  </div>
+
+  <div>
+    <label for="email" class="form-label-dark">Work email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      class="form-input-dark"
+      placeholder="jane@yourtmc.com"
+      autocomplete="email"
+    />
+  </div>
+
+  <div>
+    <label for="organisation" class="form-label-dark">
+      Organisation <span style="color: rgba(248,250,252,0.35); font-weight: 400;">(optional)</span>
+    </label>
+    <input
+      type="text"
+      id="organisation"
+      name="organisation"
+      class="form-input-dark"
+      placeholder="Acme Travel Co."
+      autocomplete="organization"
+    />
+  </div>
+
+  <div>
+    <label for="interest" class="form-label-dark">I'm joining as a…</label>
+    <select
+      id="interest"
+      name="interest_type"
+      class="form-input-dark"
+    >
+      <option value="">Select your role</option>
+      <option value="tmc">Travel Management Company (TMC)</option>
+      <option value="corporate">Corporate travel team / CFO</option>
+      <option value="government">Government organisation</option>
+      <option value="leisure-advisor">Leisure or luxury travel advisor</option>
+      <option value="investor">Investor</option>
+      <option value="developer">Developer / technical partner</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <button
+    type="submit"
+    class="btn-primary w-full py-3.5 text-sm font-semibold mt-2"
+  >
+    Request Early Access
+    <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+
+  <p class="text-xs text-center" style="color: rgba(248,250,252,0.3);">
+    No spam. No commitment. We'll be in touch when access opens.
+  </p>
+</form>
