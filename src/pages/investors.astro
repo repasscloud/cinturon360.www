@@ -1,11 +1,21 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Investor Information — Cinturon360',
+  url: 'https://cinturon360.com/investors',
+  description: 'Cinturon360 is a pre-seed travel technology company building the modern all-in-one operating platform for travel management. APAC-based, globally scalable.',
+  about: { '@type': 'Organization', name: 'Cinturon360' },
+};
 ---
 
 <PageLayout
   title="Investor Information"
   description="Cinturon360 is a pre-seed travel technology company building the modern operating layer for travel management companies. APAC-based, globally scalable."
   noIndex={false}
+  schema={schema}
 >
 
   <!-- Hero -->

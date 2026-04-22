@@ -1,11 +1,29 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Pricing — Cinturon360',
+  url: 'https://cinturon360.com/pricing',
+  description: 'Flexible commercial models for TMCs, corporates, and managed travel programs — custom pricing based on your operation, not fixed tiers.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360',
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'AUD',
+      description: 'Custom pricing based on your operation. Contact for commercial details.',
+    },
+  },
+};
 ---
 
 <PageLayout
   title="Pricing"
   description="Cinturon360 pricing is built around how you use the platform — not a fixed tier that doesn't fit your operation. Custom commercial models for TMCs, corporates, and managed travel programs."
+  schema={schema}
 >
   <!-- Hero -->
   <div class="pt-32 pb-16 bg-white">

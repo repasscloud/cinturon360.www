@@ -1,11 +1,26 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Developer Experience — Cinturon360',
+  url: 'https://cinturon360.com/platform/developer-experience',
+  description: 'API-first platform — every Cinturon360 capability accessible via REST API for TMC integrations, corporate HR/ERP connections, and third-party developers.',
+  mainEntity: {
+    '@type': 'WebAPI',
+    name: 'Cinturon360 Developer API',
+    documentation: 'https://cinturon360.com/api',
+    featureList: ['Full REST API coverage', 'TMC system integrations', 'Corporate HR and ERP connectors', 'Third-party developer access'],
+  },
+};
 ---
 
 <PageLayout
   title="Developer Experience"
   description="Cinturon360 is API-first. Every capability available in the platform is accessible via the REST API — for TMC integrations, corporate system connections, and third-party developer access."
+  schema={schema}
 >
   <div class="pt-32 pb-16" style="background: var(--c360-dark);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

@@ -1,11 +1,33 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About Cinturon360',
+  url: 'https://cinturon360.com/about',
+  description: 'Cinturon360 is built by RePass Cloud — applying first-principles thinking to a travel industry that has been patching legacy systems for too long. APAC-based, globally scalable.',
+  about: {
+    '@type': 'Organization',
+    name: 'Cinturon360',
+    foundingLocation: {
+      '@type': 'Place',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Sydney',
+        addressRegion: 'NSW',
+        addressCountry: 'AU',
+      },
+    },
+  },
+};
 ---
 
 <PageLayout
   title="About Cinturon360"
   description="Cinturon360 is built by RePass Cloud — a serial founder applying first-principles thinking to a travel industry that's been patching legacy systems for too long. APAC-based, TMC-first, globally scalable."
+  schema={schema}
 >
 
   <!-- Hero -->

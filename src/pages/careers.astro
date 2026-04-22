@@ -1,11 +1,21 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Careers at Cinturon360',
+  url: 'https://cinturon360.com/careers',
+  description: 'Join the team building the next generation of travel management technology at Cinturon360. Open roles posted on AethonJobs.',
+  about: { '@type': 'Organization', name: 'Cinturon360' },
+};
 ---
 
 <PageLayout
   title="Careers"
   description="Join the team building Cinturon360, the travel governance platform for modern TMCs and enterprise travel programs."
+  schema={schema}
 >
   <div class="pt-24 pb-16 bg-gradient-to-b from-blue-50 to-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
@@ -68,7 +78,7 @@ import CTA from '../components/sections/CTA.astro';
           Check back from time to time, or reach out to RePass Cloud on LinkedIn to express interest.
         </p>
         <a
-          href="https://www.linkedin.com/company/repasscloud"
+          href="https://www.linkedin.com/company/repass-cloud"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 btn-primary"

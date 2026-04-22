@@ -1,11 +1,25 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Integrations — Cinturon360',
+  url: 'https://cinturon360.com/platform/integrations',
+  description: 'Native GDS and NDC integrations with Amadeus, Sabre, Travelport, Duffel, AirGateway, and more — no rip-and-replace required.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360 Integration Layer',
+    featureList: ['Amadeus GDS', 'Sabre GDS', 'Travelport GDS', 'Duffel NDC', 'AirGateway NDC', 'Supplier API ecosystem'],
+  },
+};
 ---
 
 <PageLayout
   title="Integrations"
   description="Cinturon360 connects to your existing GDS, NDC, and supplier ecosystem. Native support for Amadeus, Sabre, Travelport, Duffel, AirGateway, and more — no rip-and-replace required."
+  schema={schema}
 >
   <div class="pt-32 pb-16" style="background: var(--c360-dark);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

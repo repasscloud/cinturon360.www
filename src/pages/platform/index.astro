@@ -46,11 +46,32 @@ const platformPages = [
     description: 'API-first design — every platform capability accessible via REST API for TMC integrations, corporate system connections, and custom extensions.',
   },
 ];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'The Cinturon360 Platform',
+  url: 'https://cinturon360.com/platform',
+  description: 'A single platform combining governance, automation, and visibility for all types of travel management. Six core capability areas: policy approvals, TMC operations, reporting, integrations, scale, and developer API.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360 Platform',
+    featureList: [
+      'Policy and approvals engine',
+      'TMC operations and automation',
+      'Finance-grade reporting',
+      'GDS and NDC integrations',
+      'Cloud-native performance and scale',
+      'Developer REST API',
+    ],
+  },
+};
 ---
 
 <PageLayout
   title="Platform"
   description="Cinturon360 is a single platform combining governance, automation, and visibility for travel management companies. Explore the six capability areas."
+  schema={schema}
 >
 
   <!-- Hero -->

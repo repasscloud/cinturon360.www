@@ -1,11 +1,22 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebAPI',
+  name: 'Cinturon360 REST API',
+  url: 'https://cinturon360.com/api',
+  description: 'API-first platform — every Cinturon360 capability accessible via REST API for TMC integrations, corporate system connections, and third-party developer access.',
+  documentation: 'https://cinturon360.com/api',
+  provider: { '@type': 'Organization', name: 'Cinturon360' },
+};
 ---
 
 <PageLayout
   title="API"
   description="Cinturon360 is being designed as an API-first platform. Discover how TMCs and technology partners can integrate with the platform."
+  schema={schema}
 >
   <div class="pt-24 pb-16" style="background: var(--c360-dark);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">

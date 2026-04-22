@@ -1,11 +1,25 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Policy & Approvals — Cinturon360',
+  url: 'https://cinturon360.com/platform/policy-approvals',
+  description: 'Pre-trip approval routing, flexible policy rules, structured exceptions, and full audit trail built into the Cinturon360 core data model.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360 Policy & Approvals Engine',
+    featureList: ['Pre-trip approval routing', 'Policy rule configuration', 'Exception and override handling', 'Immutable audit trail'],
+  },
+};
 ---
 
 <PageLayout
   title="Policy & Approvals"
   description="Cinturon360 routes bookings to the right approvers before spend is committed. Flexible policy rules, structured exceptions, and a full audit trail — built into the core data model."
+  schema={schema}
 >
   <div class="pt-32 pb-16" style="background: var(--c360-dark);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

@@ -1,11 +1,25 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'TMC Operations — Cinturon360',
+  url: 'https://cinturon360.com/platform/tmc-operations',
+  description: 'Modern operating platform for travel management companies — replacing legacy mid-office tools with automation, client management, and workflow orchestration.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360 TMC Operations Module',
+    featureList: ['Client portfolio management', 'Workflow automation', 'Mid-office replacement', 'TMC operational reporting'],
+  },
+};
 ---
 
 <PageLayout
   title="TMC Operations"
   description="Cinturon360 is the operating platform for travel management companies — replacing legacy mid-office tools like Tramada with modern automation, client management, and workflow orchestration."
+  schema={schema}
 >
   <div class="pt-32 pb-16" style="background: var(--c360-dark);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

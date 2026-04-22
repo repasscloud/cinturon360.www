@@ -1,11 +1,25 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Reporting & Visibility — Cinturon360',
+  url: 'https://cinturon360.com/platform/reporting-visibility',
+  description: 'Real-time, finance-grade travel spend reporting by segment, department, and cost centre — CFO-ready dashboards and audit-quality data.',
+  mainEntity: {
+    '@type': 'SoftwareApplication',
+    name: 'Cinturon360 Reporting Engine',
+    featureList: ['Real-time spend dashboards', 'Department and cost centre drill-down', 'Finance-grade audit data', 'CFO-ready travel program analytics'],
+  },
+};
 ---
 
 <PageLayout
   title="Reporting & Visibility"
   description="Cinturon360 delivers real-time, finance-grade reporting for travel programs. Spend visibility by segment, department, and cost centre — CFO-ready, not Excel-ready."
+  schema={schema}
 >
   <div class="pt-32 pb-16" style="background: var(--c360-dark);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

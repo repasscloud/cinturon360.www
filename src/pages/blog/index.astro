@@ -13,11 +13,25 @@ function readingTime(slug: string): string {
   // Approximate: 200 wpm
   return '5 min read';
 }
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Cinturon360 Blog — Travel Tech & Industry Perspectives',
+  url: 'https://cinturon360.com/blog',
+  description: 'Articles on TMC operations, travel governance, NDC adoption, and the future of managed travel in APAC and beyond.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Cinturon360',
+    logo: { '@type': 'ImageObject', url: 'https://cinturon360.com/images/logo.png' },
+  },
+};
 ---
 
 <PageLayout
   title="Blog — Travel Tech & Industry Perspectives"
   description="Articles on TMC operations, travel governance, NDC adoption, and the future of managed travel in APAC and beyond. Written by the team building Cinturon360."
+  schema={schema}
 >
 
   <!-- Hero -->

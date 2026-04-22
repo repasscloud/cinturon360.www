@@ -4,13 +4,15 @@ export interface Props {
   description?: string;
   image?: string;
   noIndex?: boolean;
+  schema?: object;
 }
 
 const {
   title,
   description = 'Cinturon360 — Travel governance, approvals, integrations, and finance-grade reporting for TMCs, corporate, and government travel programs.',
-  image = '/images/logo.svg',
+  image = '/images/logo.png',
   noIndex = false,
+  schema,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -80,8 +82,8 @@ const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.si
       "@type": "Organization",
       "name": "Cinturon360",
       "url": "https://cinturon360.com",
-      "logo": "https://cinturon360.com/images/logo.svg",
-      "description": "TMC-first travel governance platform — policy, approvals, automation, and finance-grade reporting for travel management companies and their clients.",
+      "logo": "https://cinturon360.com/images/logo.png",
+      "description": "Cinturon360 is an end-to-end travel management platform consolidating 20+ legacy systems — serving TMCs, corporates, leisure advisors, government, and consumers with flights, hotels, cruise, experiences, expense management, mobile eSIM, payments, policy approvals, and finance-grade reporting.",
       "foundingLocation": {
         "@type": "Place",
         "address": {
@@ -103,6 +105,9 @@ const absoluteImage = image.startsWith('http') ? image : new URL(image, Astro.si
       }
     }
     </script>
+
+    <!-- JSON-LD: Page-specific -->
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

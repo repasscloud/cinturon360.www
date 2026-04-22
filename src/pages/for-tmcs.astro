@@ -1,11 +1,23 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Cinturon360 for Travel Management Companies',
+  url: 'https://cinturon360.com/for-tmcs',
+  description: 'Replace Tramada and legacy mid-office tools with a modern platform for client management, automation, policy, integrations, and finance-grade reporting.',
+  audience: { '@type': 'Audience', audienceType: 'Travel Management Companies' },
+  provider: { '@type': 'Organization', name: 'Cinturon360' },
+  serviceType: 'Travel Management Software',
+};
 ---
 
 <PageLayout
   title="For Travel Management Companies"
   description="Cinturon360 is built TMC-first. Replace Tramada and legacy mid-office tools with a modern platform for client management, automation, policy, integrations, and finance-grade reporting."
+  schema={schema}
 >
 
   <!-- Hero -->

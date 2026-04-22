@@ -1,11 +1,23 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import CTA from '../components/sections/CTA.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Cinturon360 for Corporate Travel Programs',
+  url: 'https://cinturon360.com/for-corporates',
+  description: 'Pre-trip approvals, policy enforcement, and finance-grade spend visibility for CFOs, travel managers, and procurement teams.',
+  audience: { '@type': 'Audience', audienceType: 'Corporate Travel Managers and CFOs' },
+  provider: { '@type': 'Organization', name: 'Cinturon360' },
+  serviceType: 'Corporate Travel Management',
+};
 ---
 
 <PageLayout
   title="For Corporate Travel Programs"
   description="Cinturon360 gives CFOs, travel managers, and procurement teams pre-trip approvals, policy enforcement, and finance-grade spend visibility — without changing how they book."
+  schema={schema}
 >
 
   <!-- Hero -->
