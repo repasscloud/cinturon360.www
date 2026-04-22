@@ -171,25 +171,35 @@ const socialLinks = [
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
       style="border-top: 1px solid rgba(255,255,255,0.07);">
       <p class="text-xs" style="color: rgba(248,250,252,0.3);">
-        © {new Date().getFullYear()} Cinturon360 — a product by
+        © {new Date().getFullYear()} Cinturon360 by
         <a href="https://repasscloud.com" target="_blank" rel="noopener noreferrer"
           class="transition-colors hover:text-white"
           style="color: rgba(248,250,252,0.5);">
           RePass Cloud Pty Ltd
         </a>
-        · ABN <a href="https://abr.business.gov.au/ABN/View?id=74642243801" target="_blank" rel="noopener noreferrer"
-          class="transition-colors hover:text-white"
-          style="color: rgba(248,250,252,0.5);">
-          74642243801
-        </a> · Sydney, AU
       </p>
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <!-- CCPA opt-out icon link — always visible per California law -->
+        <button
+          onclick="window.c360OpenCookieBanner && window.c360OpenCookieBanner()"
+          aria-label="Your Privacy Choices — Do Not Sell or Share My Personal Information"
+          style="display:inline-flex; align-items:center; gap:0.375rem; background:none; border:none; cursor:pointer; color:rgba(248,250,252,0.35); font-size:0.75rem; padding:0; transition:color 0.15s;"
+          onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'"
+        >
+          <img src="/images/privacyoptions29x14.png" alt="Privacy options" width="29" height="14" />
+          Your Privacy Choices
+        </button>
+        <!-- <span style="color:rgba(248,250,252,0.15); font-size:0.75rem;" aria-hidden="true">·</span> -->
+        <!-- <button
+          onclick="window.c360OpenCookieBanner && window.c360OpenCookieBanner()"
+          style="background:none; border:none; cursor:pointer; font-size:0.75rem; padding:0; transition:color 0.15s; color:rgba(248,250,252,0.35);"
+          onmouseover="this.style.color='rgba(248,250,252,0.7)'" onmouseout="this.style.color='rgba(248,250,252,0.35)'"
+        >
+          Manage Cookies
+        </button> -->
+      </div>
       <p class="text-xs" style="color: rgba(248,250,252,0.25);">
-        Made with ❤️ in Sydney, AU 🇦🇺 by
-        <a href="https://repasscloud.com" target="_blank" rel="noopener noreferrer"
-          class="transition-colors hover:text-white"
-          style="color: rgba(248,250,252,0.4);">
-          RePass Cloud
-        </a>
+        Made with ❤️ in Sydney, AU 🇦🇺
       </p>
     </div>
   </div>
