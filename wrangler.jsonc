@@ -1,4 +1,9 @@
 {
+  "name": "cinturon360-www",
+  "compatibility_date": "2026-04-22",
+  "assets": {
+    "directory": "./dist"
+  },
   "observability": {
     "logs": {
       "enabled": true,
