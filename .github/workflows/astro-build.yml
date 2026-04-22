@@ -105,4 +105,5 @@ jobs:
             --title "Auto merge" \
             --body "Auto merge OK" \
           || true
-          gh pr merge dev --merge --yes
+
+          gh pr merge dev --merge
