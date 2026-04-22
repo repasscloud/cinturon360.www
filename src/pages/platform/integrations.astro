@@ -5,84 +5,116 @@ import CTA from '../../components/sections/CTA.astro';
 
 <PageLayout
   title="Integrations"
-  description="Cinturon360 connects to GDS, NDC, direct suppliers, TMC workflows, and downstream finance systems — without replacing what already works."
+  description="Cinturon360 connects to your existing GDS, NDC, and supplier ecosystem. Native support for Amadeus, Sabre, Travelport, Duffel, AirGateway, and more — no rip-and-replace required."
 >
-  <div class="pt-24 pb-16" style="background: linear-gradient(to bottom, #faf5ff, #ffffff);">
+  <div class="pt-32 pb-16" style="background: linear-gradient(to bottom, #faf5ff, #ffffff);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div class="max-w-3xl">
         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-700 mb-4">
-          Integrations
+          Platform — Integrations
         </span>
         <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-          Works with the ecosystem you already use
+          Works with the travel ecosystem you already use.
         </h1>
         <p class="text-xl text-slate-600 leading-relaxed">
-          Cinturon360 is not a rip-and-replace online booking tool. It wraps around your current channels so you can govern bookings made through TMCs, GDS/NDC, direct suppliers, and other connected sources.
+          Cinturon360 is not a booking tool. It's the governance and visibility layer that sits above your existing booking channels — connecting to GDS, NDC, and direct suppliers without displacing the relationships and workflows you've built.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Integration ecosystem -->
-  <div class="section bg-white">
+  <section class="section bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-      <h2 class="font-heading text-3xl font-bold text-slate-900 text-center mb-4">Integration ecosystem</h2>
-      <p class="text-slate-600 text-center max-w-2xl mx-auto mb-12">
-        Cinturon360 is designed to sit above the booking layer and receive data from whatever channels your organisation or TMC clients use.
-      </p>
+      <div class="text-center mb-12">
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+          The integration layer, not the replacement
+        </h2>
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
+          Most travel platforms want to replace your booking channel. Cinturon360 wraps around it — capturing booking data, applying governance, and delivering visibility regardless of where the booking was made.
+        </p>
+      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         {[
           {
-            title: 'Booking Sources',
-            icon: '✈️',
-            items: ['GDS-connected environments', 'NDC pathways', 'TMC-managed workflows', 'Direct supplier channels', 'Client-specific booking processes'],
+            badge: 'GDS',
+            badgeColor: 'bg-sky-100 text-sky-700',
+            title: 'Global Distribution Systems',
+            body: 'Native connectivity to Amadeus, Sabre, and Travelport. Booking data is captured, normalised, and fed into the governance and reporting layer in real time.',
+            partners: ['Amadeus', 'Sabre', 'Travelport'],
           },
           {
-            title: 'Downstream Systems',
-            icon: '📤',
-            items: ['Finance and ERP handoff', 'Expense platform connections', 'Reporting and BI pipelines', 'Procurement system outputs', 'Cost allocation exports'],
+            badge: 'NDC',
+            badgeColor: 'bg-purple-100 text-purple-700',
+            title: 'New Distribution Capability',
+            body: 'NDC-native support via Duffel and AirGateway. As airline distribution shifts to NDC, Cinturon360 handles both GDS and NDC data streams without separate tooling.',
+            partners: ['Duffel', 'AirGateway'],
           },
           {
-            title: 'Platform Connectivity',
-            icon: '🔌',
-            items: ['REST API for custom integrations', 'Webhook event delivery', 'Identity provider connections', 'Partner and TMC connectors', 'Extension points for custom workflows'],
+            badge: 'API',
+            badgeColor: 'bg-emerald-100 text-emerald-700',
+            title: 'Direct Suppliers & Custom Connectors',
+            body: 'Hotel chains, car rental, rail, and direct airline connections via API. Custom connector development available for TMCs with bespoke supplier relationships.',
+            partners: ['Direct suppliers', 'Custom API', 'ERP handoff'],
           },
-        ].map((group) => (
+        ].map((cat) => (
           <div class="card">
-            <div class="text-3xl mb-3">{group.icon}</div>
-            <h3 class="font-heading text-lg font-bold text-slate-900 mb-3">{group.title}</h3>
-            <ul class="space-y-2">
-              {group.items.map((item) => (
-                <li class="flex items-start gap-2 text-sm text-slate-600">
-                  <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0"></span>
-                  {item}
-                </li>
+            <span class={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium mb-4 ${cat.badgeColor}`}>
+              {cat.badge}
+            </span>
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-3">{cat.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">{cat.body}</p>
+            <div class="flex flex-wrap gap-2">
+              {cat.partners.map((p) => (
+                <span class="px-2.5 py-1 rounded-full text-xs bg-slate-100 text-slate-600">{p}</span>
               ))}
-            </ul>
+            </div>
           </div>
         ))}
       </div>
 
-      <!-- Partner logos -->
-      <div class="bg-slate-50 rounded-2xl p-8">
-        <p class="text-center text-sm font-medium text-slate-500 uppercase tracking-wider mb-6">
-          Designed to work alongside
+      <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+        <h3 class="font-heading text-xl font-bold text-slate-900 mb-4">Downstream: expense, ERP, and financial systems</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Booking and approval data flows downstream to expense platforms, ERP systems, and financial reporting tools. Cinturon360 closes the loop between travel approval and financial reconciliation — not leaving it as a manual export process.
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-          {[
-            { name: 'Amadeus', src: '/images/logos/amadeus.svg' },
-            { name: 'Sabre', src: '/images/logos/sabre.svg' },
-            { name: 'Travelport', src: '/images/logos/travelport.svg' },
-            { name: 'Duffel', src: '/images/logos/duffel.svg' },
-            { name: 'AirGateway', src: '/images/logos/airgateway.svg' },
-          ].map((logo) => (
-            <img src={logo.src} alt={logo.name} class="h-7 w-auto grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all" />
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {['Expense platforms', 'ERP systems', 'Financial reporting', 'Data export (CSV, API)'].map((item) => (
+            <div class="rounded-xl p-3 bg-white border border-slate-100 text-center">
+              <span class="text-sm text-slate-700">{item}</span>
+            </div>
           ))}
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <CTA />
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="max-w-3xl mx-auto">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+          Architecture
+        </span>
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-4">
+          API-first, built for TMC integration patterns
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Cinturon360 is built API-first. Every integration point — inbound booking data, outbound approval decisions, downstream reporting — is accessible via the same REST API that powers the platform itself.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          TMCs with bespoke supplier relationships or proprietary booking channels connect via custom connectors built against the Cinturon360 integration framework. The integration layer is designed to be extended, not locked down.
+        </p>
+        <a href="/platform/developer-experience" class="inline-flex items-center gap-2 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors">
+          See Developer Experience →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    title="Your existing ecosystem stays. Governance gets added."
+    description="Talk to the team about connecting Cinturon360 to your GDS, NDC, and supplier channels."
+    primaryCTA={{ label: 'Book a Conversation', href: '/contact' }}
+    secondaryCTA={{ label: 'See API Docs', href: '/api' }}
+  />
 </PageLayout>

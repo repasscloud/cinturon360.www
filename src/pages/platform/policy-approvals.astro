@@ -5,44 +5,60 @@ import CTA from '../../components/sections/CTA.astro';
 
 <PageLayout
   title="Policy & Approvals"
-  description="Route bookings to the right approvers before spend is committed. Apply flexible policy rules across entities, teams, travellers, and destinations."
+  description="Cinturon360 routes bookings to the right approvers before spend is committed. Flexible policy rules, structured exceptions, and a full audit trail — built into the core data model."
 >
-  <div class="pt-24 pb-16" style="background: linear-gradient(to bottom, #f0f9ff, #ffffff);">
+  <div class="pt-32 pb-16" style="background: linear-gradient(to bottom, #f0f9ff, #ffffff);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div class="max-w-3xl">
         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
-          Policy & Approvals
+          Platform — Policy & Approvals
         </span>
         <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-          Approvals before spend is committed
+          Approvals before spend is committed. Every time.
         </h1>
         <p class="text-xl text-slate-600 leading-relaxed">
-          Route bookings to the right approvers, apply structured policy logic, and maintain a full audit trail across every decision in your travel program.
+          Most travel programs have a policy document. Fewer have a policy system. Cinturon360 is the latter — route bookings to the right approvers, enforce rules at the point of booking, and maintain a defensible audit trail for every decision.
         </p>
       </div>
     </div>
   </div>
 
-  <div class="section bg-white">
+  <!-- Problem -->
+  <section class="section bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+          The problem
+        </span>
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+          Policy exists. Enforcement doesn't.
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-4">
+          The travel policy document gets reviewed annually, distributed to staff, and promptly ignored. Bookings happen before approvals. Approvals happen in email threads with no record. Finance reviews spend after it's already been committed, not before.
+        </p>
+        <p class="text-slate-600 text-lg leading-relaxed">
+          The result: compliance is unverifiable, exceptions are untracked, and audit requests become manual investigation projects.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div>
-          <h2 class="font-heading text-3xl font-bold text-slate-900 mb-6">Flexible policy control</h2>
+          <h2 class="font-heading text-2xl font-bold text-slate-900 mb-6">How Cinturon360 solves it</h2>
           <p class="text-slate-600 leading-relaxed mb-6">
-            Cinturon360 is being designed to support organisations with structured approval requirements. Policy logic should reflect the real complexity of how travel is governed — across different entities, teams, traveller types, destinations, and spend thresholds.
+            Policy and approval logic is built into the booking intake flow — not bolted on after the fact. Rules are configured at the platform level, applied consistently across every booking, and enforced before spend is committed.
           </p>
-          <p class="text-slate-600 leading-relaxed mb-8">
-            That means supporting approval paths that match the organisation, not just a simplified version of it.
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Approval chains are configured by entity, team, traveller category, cost centre, destination, supplier, fare class, or spend threshold. When a booking triggers an approval requirement, the right people are notified immediately. Decisions are recorded with timestamps, actor IDs, and justifications.
           </p>
           <div class="space-y-3">
             {[
-              'Pre-trip approvals before spend is committed',
+              'Pre-trip approvals enforced before booking confirmation',
               'Policy rules by entity, team, traveller type, or cost centre',
               'Destination and supplier-based policy logic',
               'Fare cap enforcement and class-of-travel rules',
-              'Out-of-policy handling with structured exceptions',
-              'Escalation paths for complex or high-value bookings',
-              'Full audit trail for every approval and policy outcome',
+              'Out-of-policy handling with structured exception paths',
+              'Escalation routing for complex or high-value bookings',
+              'Full audit trail: every decision, every outcome, timestamped',
             ].map((item) => (
               <div class="flex items-start gap-3">
                 <span class="mt-1 w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center flex-shrink-0">
@@ -55,27 +71,35 @@ import CTA from '../../components/sections/CTA.astro';
             ))}
           </div>
         </div>
-        <div>
-          <h2 class="font-heading text-3xl font-bold text-slate-900 mb-6">Built for real programs</h2>
-          <p class="text-slate-600 leading-relaxed mb-6">
-            Travel programs do not all look the same. An enterprise organisation may need approval chains across multiple business units, different rules for different traveller categories, and exception handling for senior executives or unusual itineraries.
-          </p>
-          <p class="text-slate-600 leading-relaxed mb-6">
-            A government agency may need defensible decision records, stronger audit requirements, and tight policy controls around specific supplier or destination categories.
-          </p>
-          <p class="text-slate-600 leading-relaxed">
-            Cinturon360 is being built to support both, and the many program structures in between.
-          </p>
-          <div class="mt-8 p-6 bg-sky-50 rounded-2xl border border-sky-100">
-            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Exception handling</h3>
+
+        <div class="space-y-6">
+          <div class="p-6 bg-sky-50 rounded-2xl border border-sky-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Exception handling that actually works</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Out-of-policy bookings should not simply be blocked. The platform is being designed to support structured exception paths — where a traveller can request approval for an out-of-policy choice, a justification can be recorded, and the decision can be escalated or tracked.
+              Out-of-policy bookings aren't simply blocked. The platform supports structured exception paths — travellers can request approval for an out-of-policy choice, record a justification, and trigger an escalation path. The outcome is logged regardless of whether it was approved or rejected.
+            </p>
+          </div>
+          <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Built for complex programs</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Enterprise organisations with multi-entity approval chains, different rules per business unit, and executive exception carve-outs. Government agencies with defensible record requirements. Cinturon360 handles both — and the many structures in between.
+            </p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">Audit-grade records</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Every approval, rejection, escalation, and exception is stored with full context. When an auditor asks who approved a booking, why, and when — the answer is already in the system, not in someone's inbox.
             </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <CTA />
+  <CTA
+    title="Policy that's enforced, not aspirational."
+    description="Talk to the team about how Cinturon360 policy and approval workflows can fit your program structure."
+    primaryCTA={{ label: 'Book a Conversation', href: '/contact' }}
+    secondaryCTA={{ label: 'Back to Platform', href: '/#platform' }}
+  />
 </PageLayout>

@@ -70,6 +70,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </script>
 
     <title>{title} | Cinturon360</title>
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cinturon360",
+      "url": "https://cinturon360.com",
+      "logo": "https://cinturon360.com/images/logo.svg",
+      "description": "TMC-first travel governance platform — policy, approvals, automation, and finance-grade reporting for travel management companies and their clients.",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sydney",
+          "addressRegion": "NSW",
+          "addressCountry": "AU"
+        }
+      },
+      "sameAs": [
+        "https://linkedin.com/in/repasscloud",
+        "https://twitter.com/repasscloud",
+        "https://github.com/repasscloud"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@repasscloud.com",
+        "contactType": "customer support"
+      }
+    }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

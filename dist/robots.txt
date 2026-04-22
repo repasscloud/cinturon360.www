@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /signin
+Disallow: /careers
+
+Sitemap: https://cinturon360.com/sitemap-index.xml

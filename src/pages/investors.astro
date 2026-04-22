@@ -1,0 +1,236 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Investor Information"
+  description="Cinturon360 is a pre-seed travel technology company building the modern operating layer for travel management companies. APAC-based, globally scalable."
+  noIndex={false}
+>
+
+  <!-- Hero -->
+  <section
+    class="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32"
+    style="background: linear-gradient(30deg, #38bdf833 0%, #0f172a 60%);"
+  >
+    <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none" style="background: #38bdf8;"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="flex justify-center mb-8">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border"
+            style="background: rgba(56,189,248,0.1); border-color: rgba(56,189,248,0.2); color: #38bdf8;">
+            Pre-seed investment opportunity
+          </span>
+        </div>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          The operating layer the travel industry has been waiting for.
+        </h1>
+        <p class="text-lg text-slate-300 leading-relaxed">
+          Cinturon360 is replacing legacy TMC back-office infrastructure with a modern, cloud-native platform built for governance, automation, and visibility. APAC-first. Globally scalable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The problem -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+          The problem
+        </span>
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+          A $1.4 trillion industry running on decades-old infrastructure
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          The global corporate travel market generates over $1.4 trillion in annual spend. Travel management companies (TMCs) sit at the centre of that market — managing bookings, policies, compliance, and reporting for thousands of corporate clients.
+        </p>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          The tools most TMCs use today — Tramada, Crosscheck, legacy mid-office platforms — were built before cloud computing, before NDC distribution, and before the modern compliance bar. The industry has patched around the problem for decades. The result is fragile, expensive, and impossible to scale.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            { stat: 'Manual', label: 'client onboarding for most TMCs — no repeatable process' },
+            { stat: 'Excel', label: 'is still the primary reporting tool for many TMC operations' },
+            { stat: 'Legacy', label: 'mid-office tools not updated for NDC or modern API standards' },
+          ].map((item) => (
+            <div class="rounded-xl p-5 bg-slate-50 border border-slate-100 text-center">
+              <p class="font-heading text-2xl font-bold text-orange-500 mb-1">{item.stat}</p>
+              <p class="text-slate-600 text-sm leading-relaxed">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The solution -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+        The solution
+      </span>
+      <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+        Cinturon360: the modern TMC operating layer
+      </h2>
+      <p class="text-slate-600 text-lg leading-relaxed mb-8">
+        Cinturon360 is a cloud-native platform that replaces legacy mid-office infrastructure with a modern system for governance, automation, and visibility. Built TMC-first — not corporate-first, not expense-first. The platform TMCs run. The visibility their clients need.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        {[
+          { title: 'Replaces Tramada', body: 'Direct replacement for legacy mid-office and back-office tooling with modern, cloud-native architecture.' },
+          { title: 'No rip-and-replace', body: 'Works alongside existing GDS (Amadeus, Sabre, Travelport), NDC (Duffel, AirGateway), and direct suppliers.' },
+          { title: 'TMC-first design', body: 'Every feature is designed for how TMCs actually operate — client onboarding, policy management, workflows, and scale.' },
+          { title: 'API-first', body: 'Built for integration. Modern REST API with developer tooling for TMCs and corporates to extend the platform.' },
+        ].map((item) => (
+          <div class="rounded-xl p-5 bg-white border border-slate-100">
+            <h3 class="font-heading font-semibold text-slate-900 mb-1">{item.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Market -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700 mb-4">
+        Market opportunity
+      </span>
+      <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+        APAC beachhead. Global platform.
+      </h2>
+      <p class="text-slate-600 text-lg leading-relaxed mb-8">
+        The APAC travel management market is underserved by modern tooling. Tramada dominates the ANZ TMC market with a product that hasn't fundamentally changed in years. The NDC transition is forcing TMCs to re-evaluate their entire technology stack — creating a structural window for a new platform to enter.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        {[
+          { stat: 'APAC-first', label: 'ANZ TMC market as the primary beachhead, APAC expansion within 24 months' },
+          { stat: 'NDC catalyst', label: 'Airline NDC rollout is forcing TMCs to re-platform mid-office tooling now' },
+          { stat: 'Global TAM', label: 'TMC operations tooling addresses a global market beyond the initial APAC entry' },
+        ].map((item) => (
+          <div class="rounded-xl p-5 border border-slate-100 bg-slate-50 text-center">
+            <p class="font-heading text-xl font-bold text-sky-600 mb-1">{item.stat}</p>
+            <p class="text-slate-600 text-sm leading-relaxed">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why now -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+        Why now
+      </span>
+      <h2 class="font-heading text-3xl font-bold text-slate-900 mb-6">
+        Three forces converging at once
+      </h2>
+      <div class="space-y-4">
+        {[
+          {
+            n: '01',
+            title: 'NDC is forcing re-platforming',
+            body: 'Airline NDC adoption is breaking the legacy GDS-only workflow that Tramada was built around. TMCs need a platform that handles GDS and NDC natively — and most don\'t have one.',
+          },
+          {
+            n: '02',
+            title: 'Compliance requirements are increasing',
+            body: 'Post-COVID, corporate and government clients are demanding defensible audit trails, structured approvals, and finance-grade reporting. Legacy tools can\'t deliver this without expensive customisation.',
+          },
+          {
+            n: '03',
+            title: 'Travel has recovered — the tool stack hasn\'t',
+            body: 'Corporate travel is back to pre-pandemic levels. TMC operations are under the same pressure, with the same legacy tools. The window for a modern replacement has never been wider.',
+          },
+        ].map((item) => (
+          <div class="rounded-xl p-6 bg-white border border-slate-100 flex gap-5">
+            <span class="font-heading text-2xl font-bold flex-shrink-0" style="color: #38bdf8;">{item.n}</span>
+            <div>
+              <h3 class="font-heading font-semibold text-slate-900 mb-1">{item.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stage + team -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+            Current stage
+          </span>
+          <h2 class="font-heading text-2xl font-bold text-slate-900 mb-4">Where we are</h2>
+          <ul class="space-y-3">
+            {[
+              'MVP in active development — integration layer and connectors functional',
+              'Design partner conversations underway with APAC TMCs',
+              'Architecture validated for GDS, NDC, and direct supplier connectivity',
+              'Pre-seed raise open — seeking partners aligned with the APAC travel tech opportunity',
+            ].map((item) => (
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+            Founder
+          </span>
+          <h2 class="font-heading text-2xl font-bold text-slate-900 mb-4">Why this team</h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Danijel Wynyard is a serial founder and operator who has built and scaled software businesses across multiple industries. Cinturon360 applies that operator's lens to a travel industry problem that insiders have stopped seeing — because they've been too close to it for too long.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            RePass Cloud Pty Ltd is the entity behind Cinturon360, based in Sydney, Australia, and building for the APAC market first.
+          </p>
+          <a
+            href="https://linkedin.com/in/repasscloud"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 mt-4 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors"
+          >
+            Connect on LinkedIn →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section
+    class="py-16 md:py-24"
+    style="background: linear-gradient(30deg, #38bdf833 0%, #0f172a 70%);"
+  >
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+        Interested in the pre-seed round?
+      </h2>
+      <p class="text-slate-300 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+        We're speaking with investors who understand the travel technology space and the APAC opportunity. Reach out directly to start the conversation and request our deck.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="btn-primary text-base px-8 py-4">
+          Request Our Deck
+        </a>
+        <a href="/about" class="btn-outline text-base px-8 py-4">
+          About the Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>

@@ -5,68 +5,106 @@ import CTA from '../../components/sections/CTA.astro';
 
 <PageLayout
   title="TMC Operations"
-  description="Cinturon360 helps travel management companies onboard clients faster, manage client programs at scale, and deliver a more consistent service model."
+  description="Cinturon360 is the operating platform for travel management companies — replacing legacy mid-office tools like Tramada with modern automation, client management, and workflow orchestration."
 >
-  <div class="pt-24 pb-16" style="background: linear-gradient(to bottom, #fff7ed, #ffffff);">
+  <div class="pt-32 pb-16" style="background: linear-gradient(to bottom, #f0f9ff, #ffffff);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div class="max-w-3xl">
-        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
-          TMC Operations
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
+          Platform — TMC Operations
         </span>
         <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-          A stronger operating platform for TMCs
+          The platform TMCs run. Not the one they tolerate.
         </h1>
         <p class="text-xl text-slate-600 leading-relaxed">
-          Travel management companies need more than booking support. They need a platform that helps them onboard clients, apply governance, manage integrations, and scale service delivery with confidence.
+          Cinturon360 is designed from the ground up for travel management company operations — replacing legacy mid-office tools with modern automation, repeatable client configuration, and workflow orchestration built around how TMCs actually work.
         </p>
       </div>
     </div>
   </div>
 
-  <div class="section bg-white">
+  <!-- Problem -->
+  <section class="section bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+          The problem
+        </span>
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+          TMC operations don't scale on legacy tools
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-4">
+          Tramada, Crosscheck, and legacy mid-office platforms were built for an era before cloud, before NDC, and before the scale expectations of modern TMC operations. Every new client is a custom setup. Every process is manual. Every integration is a project.
+        </p>
+        <p class="text-slate-600 text-lg leading-relaxed">
+          The result: TMC operations teams grow headcount proportionally with client volume. There's no platform leverage — just more people doing the same manual work in a system that doesn't help them.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {[
-          { icon: '⚡', title: 'Faster Client Onboarding', description: 'Bring new clients into a controlled operating environment without treating each account as a custom rebuild. Cinturon360 is being designed to make structured onboarding repeatable across organisational structure, traveller setup, policy, and integrations.' },
-          { icon: '🏗️', title: 'Client-Specific Operating Models', description: 'Every client can have its own approval structures, travel policies, reporting expectations, booking channel mix, and integration needs. Manage that complexity without relying on manual workarounds and fragmented systems.' },
-          { icon: '🔒', title: 'Secure Client Management', description: 'Maintain clear separation between client environments. Role-based access, client boundaries, and structured user management give TMCs and their clients confidence in how the platform is controlled.' },
-          { icon: '🔄', title: 'Self-Service That Supports TMCs', description: 'Give clients visibility into their own travel program — spend, approvals, policy position — without removing the TMC from the service model. Self-service that helps clients without bypassing the agency relationship.' },
+          {
+            icon: '⚙️',
+            title: 'Automated client onboarding',
+            body: 'Repeatable, configurable onboarding workflows for every new corporate client. Policy rules, approval chains, cost centre mapping, and reporting templates — configured once and deployed consistently. No bespoke spreadsheet for every new account.',
+          },
+          {
+            icon: '🔄',
+            title: 'Mid-office workflow automation',
+            body: 'Booking intake, quality control, exception handling, and client notifications — automated via configurable workflow logic. Replace manual mid-office tasks with a system that runs the process, not a person following a checklist.',
+          },
+          {
+            icon: '👥',
+            title: 'Client portfolio management',
+            body: 'Manage your entire client portfolio from a single operations dashboard. Track policy status, approval backlogs, spend by client, and compliance metrics across your book of business — not client-by-client across separate logins.',
+          },
+          {
+            icon: '📋',
+            title: 'Policy configuration at scale',
+            body: 'Define policy templates once and deploy them across multiple clients. Customise per-client without rebuilding from scratch. Update a policy rule centrally and it propagates correctly — no manual update for each affected client.',
+          },
+          {
+            icon: '📈',
+            title: 'Operational reporting',
+            body: 'TMC-level operational metrics alongside client-facing reporting. Booking volumes, exception rates, approval SLA performance, and integration health — in one place, not assembled from three different system exports.',
+          },
+          {
+            icon: '🔗',
+            title: 'Supplier and integration management',
+            body: 'Manage GDS credentials, NDC feed configurations, and direct supplier connections centrally. When a new supplier comes online or a credential rotates, update it once — not across every client configuration separately.',
+          },
         ].map((item) => (
           <div class="card">
-            <div class="text-3xl mb-3">{item.icon}</div>
-            <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+            <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-xl mb-4">{item.icon}</div>
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{item.body}</p>
           </div>
         ))}
       </div>
+    </div>
+  </section>
 
-      <!-- Problems solved -->
-      <div class="bg-orange-50 rounded-2xl border border-orange-100 p-8 md:p-10">
-        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-6">Problems Cinturon360 is designed to solve for TMCs</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            'Slow and inconsistent client onboarding',
-            'Client-by-client variation in operating models',
-            'Fragmented approval and policy handling',
-            'Disconnected visibility across client accounts',
-            'Heavy manual servicing overhead',
-            'Weak separation between client environments',
-            'Limited standardisation at scale',
-            'Difficulty connecting to diverse integration landscapes',
-          ].map((problem) => (
-            <div class="flex items-start gap-3">
-              <span class="mt-1 w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
-                <svg class="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
-              </span>
-              <span class="text-sm text-slate-700">{problem}</span>
-            </div>
-          ))}
-        </div>
+  <!-- Scale -->
+  <section class="section bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-4">
+          Scale without proportional headcount
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          The measure of a platform for TMC operations isn't how many clients you can manage with a full team. It's how many clients you can manage when the platform does the repeatable work and your team focuses on the client relationship.
+        </p>
+        <a href="/for-tmcs" class="inline-flex items-center gap-2 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors">
+          See the full TMC overview →
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <CTA />
+  <CTA
+    title="Replace legacy mid-office with something built for today."
+    description="Talk to the team about what Cinturon360 TMC Operations looks like for your business."
+    primaryCTA={{ label: 'Book a Conversation', href: '/contact' }}
+    secondaryCTA={{ label: 'For TMCs Overview', href: '/for-tmcs' }}
+  />
 </PageLayout>

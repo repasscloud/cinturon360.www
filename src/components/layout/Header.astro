@@ -1,5 +1,6 @@
 ---
 const navLinks = [
+  { label: 'For TMCs', href: '/for-tmcs' },
   { label: 'API', href: '/api' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -11,6 +12,7 @@ const platformLinks = [
   { label: 'Reporting & Visibility', href: '/platform/reporting-visibility' },
   { label: 'TMC Operations', href: '/platform/tmc-operations' },
   { label: 'Performance & Scale', href: '/platform/performance-scale' },
+  { label: 'Developer Experience', href: '/platform/developer-experience' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -76,8 +78,8 @@ const currentPath = Astro.url.pathname;
 
       <!-- Right actions -->
       <div class="hidden md:flex items-center gap-3">
-        <a href="/signin" class="btn-ghost text-sm px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-colors">
-          Sign in
+        <a href="/waitlist" class="btn-ghost text-sm px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-colors">
+          Join Waitlist
         </a>
         <a href="/contact" class="btn-primary text-sm">
           Reach Out
@@ -124,8 +126,8 @@ const currentPath = Astro.url.pathname;
         </a>
       ))}
       <div class="pt-3 flex flex-col gap-2">
-        <a href="/signin" class="block text-center px-4 py-2 text-sm text-slate-300 border border-white/20 rounded-full hover:bg-white/5 transition-colors">
-          Sign in
+        <a href="/waitlist" class="block text-center px-4 py-2 text-sm text-slate-300 border border-white/20 rounded-full hover:bg-white/5 transition-colors">
+          Join Waitlist
         </a>
         <a href="/contact" class="block text-center px-4 py-2 text-sm font-semibold bg-sky-400 text-slate-900 rounded-full hover:bg-sky-300 transition-colors">
           Reach Out

@@ -1,0 +1,60 @@
+---
+const legacyTools = [
+  { name: 'Tramada', issue: 'Legacy back-office built for a pre-cloud world. Configuration-heavy, slow to update, expensive to maintain.' },
+  { name: 'SAP Concur', issue: 'Enterprise expense tool bolted onto travel. Governance is an afterthought, not a foundation.' },
+  { name: 'Serko / Zeno', issue: 'Corporate booking tools focused on the booking experience, not TMC operations or mid-office control.' },
+  { name: 'Crosscheck', issue: 'Quality control point solution. Doesn\'t replace the need for a full operational platform.' },
+];
+---
+
+<section class="section" style="background: #0f172a;">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium mb-4"
+        style="background: rgba(249,115,22,0.15); color: #f97316;">
+        Why now
+      </span>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+        Legacy tools weren't built for this
+      </h2>
+      <p class="text-slate-400 text-lg leading-relaxed">
+        The travel tech stack most TMCs run today was designed before NDC, before cloud-native expectations, and before the compliance bar moved. The industry has patched around the problem long enough.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+      {legacyTools.map((tool) => (
+        <div
+          class="rounded-xl p-5 flex gap-4 items-start"
+          style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);"
+        >
+          <span class="flex-shrink-0 w-2 h-2 rounded-full mt-2" style="background: #f97316;"></span>
+          <div>
+            <span class="text-sm font-semibold text-white">{tool.name}</span>
+            <p class="text-slate-400 text-sm mt-1 leading-relaxed">{tool.issue}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div
+      class="rounded-2xl p-8 text-center"
+      style="background: linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(249,115,22,0.08) 100%); border: 1px solid rgba(56,189,248,0.2);"
+    >
+      <p class="text-white text-xl font-semibold mb-2 font-heading">
+        Cinturon360 is the platform built for what comes next.
+      </p>
+      <p class="text-slate-400 text-base mb-6">
+        Modern architecture. TMC-first design. No rip-and-replace. Works alongside what you already use — and replaces what you shouldn't still be using.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/for-tmcs" class="btn-primary text-sm px-6 py-3">
+          See what TMCs get
+        </a>
+        <a href="/platform/integrations" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+          View integrations →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

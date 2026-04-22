@@ -1,80 +1,103 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import CTA from '../../components/sections/CTA.astro';
-
-const iconColorMap: Record<string, string> = {
-  emerald: 'bg-emerald-50 text-emerald-700',
-  sky: 'bg-sky-50 text-sky-700',
-  orange: 'bg-orange-50 text-orange-700',
-  purple: 'bg-purple-50 text-purple-700',
-};
 ---
 
 <PageLayout
   title="Reporting & Visibility"
-  description="Finance-grade reporting and operational visibility across spend, compliance, exceptions, and booking activity for TMCs and their clients."
+  description="Cinturon360 delivers real-time, finance-grade reporting for travel programs. Spend visibility by segment, department, and cost centre — CFO-ready, not Excel-ready."
 >
-  <div class="pt-24 pb-16" style="background: linear-gradient(to bottom, #f0fdf4, #ffffff);">
+  <div class="pt-32 pb-16" style="background: linear-gradient(to bottom, #f0fdf4, #ffffff);">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div class="max-w-3xl">
         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700 mb-4">
-          Reporting & Visibility
+          Platform — Reporting & Visibility
         </span>
         <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-          Finance-grade visibility across your travel program
+          Finance-grade reporting. Not another Excel export.
         </h1>
         <p class="text-xl text-slate-600 leading-relaxed">
-          Give travel, finance, procurement, and leadership teams a clear picture of spend, compliance, exceptions, and operational activity across the organisation.
+          Real-time spend visibility across every booking, approval, exception, and policy outcome — structured for finance teams, compliance review, and client reporting. Available immediately. Not at month end.
         </p>
       </div>
     </div>
   </div>
 
-  <div class="section bg-white">
+  <!-- Problem -->
+  <section class="section bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        {[
-          { icon: '💰', color: 'emerald', title: 'Spend Visibility', description: 'Understand travel spend across entities, teams, travellers, suppliers, and booking channels. Segment and slice the data to answer the questions that matter to finance and procurement.' },
-          { icon: '✅', color: 'sky', title: 'Compliance Reporting', description: 'Track what proportion of travel is in-policy, out-of-policy, or subject to approved exceptions. Give compliance and finance teams the data they need to review and report on policy performance.' },
-          { icon: '⚠️', color: 'orange', title: 'Exception Monitoring', description: 'Track where exceptions are occurring, who is approving them, and whether patterns are forming. Surface exception trends before they become systemic issues.' },
-          { icon: '📤', color: 'purple', title: 'Export-Ready Data', description: 'Get data out of the platform into finance systems, ERP workflows, BI tools, or procurement reporting. Structured outputs designed for downstream use.' },
-        ].map((item) => (
-            <div class="card">
-              <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl ${iconColorMap[item.color]}`}>
-                {item.icon}
-              </div>
-              <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-              <p class="text-slate-600 text-sm leading-relaxed">{item.description}</p>
-            </div>
-        ))}
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 mb-4">
+          The problem
+        </span>
+        <h2 class="font-heading text-3xl font-bold text-slate-900 mb-4">
+          Travel reporting is still manual work
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-4">
+          Someone in the team spends two days every month pulling booking data from a GDS export, cross-referencing it against an approval log in a spreadsheet, and producing a report that's already out of date by the time it reaches finance.
+        </p>
+        <p class="text-slate-600 text-lg leading-relaxed">
+          The data exists. The problem is that it's fragmented across booking tools, approval email threads, and expense systems — with no single source of truth.
+        </p>
       </div>
 
-      <!-- Audience breakdown -->
-      <div class="bg-slate-50 rounded-2xl p-8 md:p-10">
-        <h2 class="font-heading text-2xl font-bold text-slate-900 mb-6 text-center">Visibility for every stakeholder</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { audience: 'TMCs', points: ['Visibility across client accounts', 'Servicing conversation data', 'Portfolio-level reporting', 'Operational issue surfacing'] },
-            { audience: 'Corporate Clients', points: ['Spend and policy performance', 'Approval outcomes by team', 'Exception trends', 'Finance-ready outputs'] },
-            { audience: 'Government', points: ['Stronger oversight records', 'Defensible reporting trails', 'Audit-ready visibility', 'Policy adherence data'] },
-            { audience: 'Enterprise', points: ['Cross-entity visibility', 'Business unit segmentation', 'Leadership dashboards', 'Procurement reporting'] },
-          ].map((group) => (
-            <div>
-              <h3 class="font-heading text-base font-bold text-slate-900 mb-3">{group.audience}</h3>
-              <ul class="space-y-2">
-                {group.points.map((point) => (
-                  <li class="flex items-start gap-2 text-sm text-slate-600">
-                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-slate-900 mb-6">What Cinturon360 delivers</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Booking, approval, and policy outcome data is captured in a single data model — so reporting doesn't require aggregation. Spend is visible in real time, segmented however the viewer needs it, and exportable in structured formats for finance, audit, or client review.
+          </p>
+          <div class="space-y-3">
+            {[
+              'Real-time spend visibility — not month-end summaries',
+              'Breakdown by traveller, department, cost centre, segment',
+              'Policy compliance rate and exception analysis',
+              'Approval turnaround time and escalation metrics',
+              'Supplier and route spend analysis',
+              'Multi-entity consolidation for complex programs',
+              'Export-ready: structured data, not raw dumps',
+              'Client-facing reporting for TMC account management',
+            ].map((item) => (
+              <div class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span class="text-sm text-slate-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">For finance teams</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              CFO-ready spend data with cost centre allocation, budget tracking, and variance analysis. Travel spend is treated like any other managed cost — structured, attributed, and reviewable without manual assembly.
+            </p>
+          </div>
+          <div class="p-6 bg-sky-50 rounded-2xl border border-sky-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">For TMC account managers</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Client-facing reporting without the monthly export ritual. Account managers can pull current spend, compliance, and exception data at any time — making client reviews a conversation, not a presentation of last month's news.
+            </p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <h3 class="font-heading text-lg font-bold text-slate-900 mb-2">For audit and compliance</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Every booking decision, approval, and exception is recorded with context. Compliance reports are generated from the same data that drives operations — no reconstruction, no interpretation.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <CTA />
+  <CTA
+    title="Visibility that doesn't require a spreadsheet."
+    description="Talk to the team about what finance-grade reporting looks like for your travel program."
+    primaryCTA={{ label: 'Book a Conversation', href: '/contact' }}
+    secondaryCTA={{ label: 'Back to Platform', href: '/' }}
+  />
 </PageLayout>
