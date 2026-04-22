@@ -20,9 +20,36 @@ const formattedDate = date
       day: 'numeric',
     }).format(date)
   : null;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  ...(description && { description }),
+  ...(date && { datePublished: date.toISOString() }),
+  author: {
+    '@type': author ? 'Person' : 'Organization',
+    name: author || 'Cinturon360',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Cinturon360',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://cinturon360.com/images/logo.svg',
+    },
+  },
+  url: Astro.url.href,
+  ...(featured_image && {
+    image: featured_image.startsWith('http')
+      ? featured_image
+      : new URL(featured_image, Astro.site).toString(),
+  }),
+};
 ---
 
 <PageLayout title={title} description={description} image={featured_image}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
   <!-- Article hero -->
   <div class="pt-28 pb-10" style="background: var(--c360-dark);">
