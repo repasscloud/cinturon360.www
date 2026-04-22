@@ -1,59 +1,61 @@
 ---
 const legacyTools = [
-  { name: 'Tramada', issue: 'Legacy back-office built for a pre-cloud world. Configuration-heavy, slow to update, expensive to maintain.' },
-  { name: 'SAP Concur', issue: 'Enterprise expense tool bolted onto travel. Governance is an afterthought, not a foundation.' },
-  { name: 'Serko / Zeno', issue: 'Corporate booking tools focused on the booking experience, not TMC operations or mid-office control.' },
-  { name: 'Crosscheck', issue: 'Quality control point solution. Doesn\'t replace the need for a full operational platform.' },
+  { name: 'Tramada', issue: 'On-premise legacy back-office. Built before cloud, before NDC, before modern compliance. Still dominant in ANZ — and still showing its age.' },
+  { name: 'SAP Concur', issue: 'Enterprise expense platform with travel bolted on. Governance is an afterthought, not a foundation. Built for corporate buyers, not TMC operations.' },
+  { name: 'Serko / Zeno', issue: 'Corporate booking tools focused on the traveller experience. Doesn\'t solve the back-office, mid-office, or TMC operations problem.' },
+  { name: 'Crosscheck', issue: 'Quality control point solution. Useful for one part of the problem — doesn\'t replace the need for a full operational platform.' },
 ];
 ---
 
-<section class="section" style="background: #0f172a;">
+<section class="section" style="background: var(--c360-dark);">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-    <div class="max-w-3xl mx-auto text-center mb-12">
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium mb-4"
-        style="background: rgba(249,115,22,0.15); color: #f97316;">
-        Why now
-      </span>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-        Legacy tools weren't built for this
+    <div class="max-w-3xl mx-auto text-center mb-14">
+      <span class="section-badge section-badge-accent">Why now</span>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-4">
+        Legacy tools weren't built<br class="hidden md:block" />
+        <span style="color: var(--c360-accent);">for what comes next.</span>
       </h2>
-      <p class="text-slate-400 text-lg leading-relaxed">
-        The travel tech stack most TMCs run today was designed before NDC, before cloud-native expectations, and before the compliance bar moved. The industry has patched around the problem long enough.
+      <p class="text-lg leading-relaxed" style="color: rgba(248,250,252,0.55);">
+        The industry has patched around the same problem for decades. NDC is forcing a reckoning. Compliance requirements are rising. The window to re-platform is now.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14">
       {legacyTools.map((tool) => (
-        <div
-          class="rounded-xl p-5 flex gap-4 items-start"
-          style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);"
-        >
-          <span class="flex-shrink-0 w-2 h-2 rounded-full mt-2" style="background: #f97316;"></span>
+        <div class="rounded-2xl p-5 flex gap-4 items-start"
+          style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);">
+          <span class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold mt-0.5"
+            style="background: rgba(249,115,22,0.15); color: var(--c360-accent); border: 1px solid rgba(249,115,22,0.2);">
+            ✕
+          </span>
           <div>
-            <span class="text-sm font-semibold text-white">{tool.name}</span>
+            <span class="text-sm font-bold text-white">{tool.name}</span>
             <p class="text-slate-400 text-sm mt-1 leading-relaxed">{tool.issue}</p>
           </div>
         </div>
       ))}
     </div>
 
-    <div
-      class="rounded-2xl p-8 text-center"
-      style="background: linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(249,115,22,0.08) 100%); border: 1px solid rgba(56,189,248,0.2);"
-    >
-      <p class="text-white text-xl font-semibold mb-2 font-heading">
-        Cinturon360 is the platform built for what comes next.
-      </p>
-      <p class="text-slate-400 text-base mb-6">
-        Modern architecture. TMC-first design. No rip-and-replace. Works alongside what you already use — and replaces what you shouldn't still be using.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/for-tmcs" class="btn-primary text-sm px-6 py-3">
-          See what TMCs get
-        </a>
-        <a href="/platform/integrations" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">
-          View integrations →
-        </a>
+    <!-- The answer -->
+    <div class="rounded-2xl p-8 md:p-10 relative overflow-hidden"
+      style="background: linear-gradient(135deg, rgba(56,189,248,0.08) 0%, rgba(249,115,22,0.06) 100%); border: 1px solid rgba(56,189,248,0.2);">
+      <div class="absolute top-0 right-0 w-64 h-64 rounded-full pointer-events-none"
+        style="background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%); transform: translate(30%, -30%);"></div>
+      <div class="relative z-10 text-center max-w-2xl mx-auto">
+        <p class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">
+          Cinturon<span style="color: var(--c360-accent);">360</span> is the platform built for what comes next.
+        </p>
+        <p class="text-base leading-relaxed mb-8" style="color: rgba(248,250,252,0.6);">
+          Modern cloud-native architecture. TMC-first design. No rip-and-replace. Works alongside GDS, NDC, and your existing supplier relationships — while replacing the legacy mid-office that's been holding you back.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/for-tmcs" class="btn-primary text-sm px-7 py-3">
+            See what TMCs get →
+          </a>
+          <a href="/platform/integrations" class="text-sm font-medium transition-colors" style="color: rgba(248,250,252,0.55);">
+            View integrations
+          </a>
+        </div>
       </div>
     </div>
   </div>

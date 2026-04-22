@@ -2,6 +2,7 @@
 export interface Props {
   badge?: string;
   headline?: string;
+  accentWord?: string;
   subheadline?: string;
   supportText?: string;
   primaryCTA?: { label: string; href: string };
@@ -9,71 +10,93 @@ export interface Props {
 }
 
 const {
-  badge = 'TMC-first travel platform',
+  badge = 'Now entering ANZ & APAC markets',
   headline = 'The operating layer your TMC has been missing.',
-  subheadline = 'Cinturon360 replaces legacy back-office complexity with modern governance, automation, and finance-grade reporting — without forcing you to change how you book.',
-  supportText = 'Works alongside GDS, NDC, direct suppliers, and your existing TMC workflows. No rip-and-replace.',
+  subheadline = 'Cinturon360 replaces legacy mid-office complexity — bringing modern governance, workflow automation, and finance-grade reporting to travel management companies without forcing you to change how you book.',
+  supportText = 'Works with Amadeus · Sabre · Travelport · Duffel · AirGateway',
   primaryCTA = { label: 'Built for TMCs', href: '/for-tmcs' },
   secondaryCTA = { label: 'Join Waitlist', href: '/waitlist' },
 } = Astro.props;
 ---
 
 <section
-  class="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32"
-  style="background: linear-gradient(30deg, #38bdf833 0%, #0f172a 60%);"
+  class="relative min-h-screen flex items-center overflow-hidden"
+  style="background: var(--c360-dark);"
 >
-  <!-- Background glow blobs -->
-  <div
-    class="absolute -top-20 -left-20 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
-    style="background: #38bdf8;"
-  ></div>
-  <div
-    class="absolute top-40 right-0 w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none"
-    style="background: #f97316;"
-  ></div>
+  <!-- Background grid pattern -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 64px 64px;"></div>
 
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
-    <div class="max-w-4xl mx-auto text-center">
+  <!-- Gradient orbs -->
+  <div class="absolute -top-32 -left-32 w-[700px] h-[700px] rounded-full pointer-events-none animate-float"
+    style="background: radial-gradient(circle, rgba(56,189,248,0.18) 0%, transparent 70%);"></div>
+  <div class="absolute -bottom-32 -right-20 w-[600px] h-[600px] rounded-full pointer-events-none animate-float-delayed"
+    style="background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
+    style="background: radial-gradient(circle, rgba(167,139,250,0.05) 0%, transparent 65%);"></div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 pt-32 pb-24">
+    <div class="max-w-5xl mx-auto text-center">
+
       <!-- Badge -->
       <div class="flex justify-center mb-8">
         <span class="hero-badge">
-          <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+          <span class="w-2 h-2 rounded-full animate-pulse-glow" style="background: var(--c360-accent);"></span>
           {badge}
         </span>
       </div>
 
       <!-- Headline -->
-      <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+      <h1 class="font-heading font-extrabold text-white mb-6 leading-[1.05] tracking-tight"
+        style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
         {headline}
       </h1>
 
-      <!-- Sub-headline -->
-      <p class="text-lg md:text-xl text-slate-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+      <!-- Subheadline -->
+      <p class="text-lg md:text-xl leading-relaxed mb-4 max-w-3xl mx-auto"
+        style="color: rgba(248,250,252,0.6);">
         {subheadline}
       </p>
 
       <!-- Support text -->
       {supportText && (
-        <p class="text-sm text-slate-500 mb-10">
+        <p class="text-xs uppercase tracking-widest mb-12" style="color: rgba(248,250,252,0.3);">
           {supportText}
         </p>
       )}
 
       <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a
-          href={primaryCTA.href}
-          class="btn-primary text-base px-8 py-4"
-        >
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+        <a href={primaryCTA.href} class="btn-primary text-base px-8 py-4 text-sm font-semibold">
           {primaryCTA.label}
+          <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
         </a>
-        <a
-          href={secondaryCTA.href}
-          class="btn-outline text-base px-8 py-4"
-        >
+        <a href={secondaryCTA.href} class="btn-outline text-sm px-8 py-4">
           {secondaryCTA.label}
         </a>
       </div>
+
+      <!-- Stat pills -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        {[
+          { label: 'TMC-first design', icon: '🏢' },
+          { label: 'GDS + NDC native', icon: '🔗' },
+          { label: 'APAC-hosted', icon: '🌏' },
+          { label: 'No rip-and-replace', icon: '✅' },
+          { label: 'Pre-seed stage', icon: '🚀' },
+        ].map((pill) => (
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium"
+            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(248,250,252,0.6);">
+            <span>{pill.icon}</span>
+            {pill.label}
+          </span>
+        ))}
+      </div>
     </div>
   </div>
+
+  <!-- Bottom fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+    style="background: linear-gradient(to bottom, transparent, #05080f);"></div>
 </section>

@@ -1,0 +1,78 @@
+---
+const steps = [
+  {
+    number: '01',
+    icon: '🔌',
+    color: '#38bdf8',
+    bgColor: 'rgba(56,189,248,0.1)',
+    borderColor: 'rgba(56,189,248,0.2)',
+    title: 'Connect to your ecosystem',
+    body: 'Cinturon360 integrates with the GDS (Amadeus, Sabre, Travelport), NDC feeds (Duffel, AirGateway), and direct suppliers you already use. No migration. No forced change.',
+  },
+  {
+    number: '02',
+    icon: '⚙️',
+    color: '#f97316',
+    bgColor: 'rgba(249,115,22,0.1)',
+    borderColor: 'rgba(249,115,22,0.2)',
+    title: 'Apply governance & automation',
+    body: 'Configure policy rules, approval chains, and workflow automation for each client. Cinturon360 enforces them at booking — not after the fact, not in email, not in a spreadsheet.',
+  },
+  {
+    number: '03',
+    icon: '📊',
+    color: '#10b981',
+    bgColor: 'rgba(16,185,129,0.1)',
+    borderColor: 'rgba(16,185,129,0.2)',
+    title: 'Get real-time visibility',
+    body: 'Finance teams, travel managers, and TMC account managers get live spend data, compliance reporting, and exception tracking — structured for audit, client review, or board presentation.',
+  },
+];
+---
+
+<section class="section bg-slate-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <div class="text-center mb-14">
+      <span class="section-badge section-badge-primary">How it works</span>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold text-slate-900 mb-4">
+        Three layers.<br class="hidden md:block" />
+        <span style="color: var(--c360-primary);">One integrated system.</span>
+      </h2>
+      <p class="text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">
+        Connect what you have. Govern what gets booked. See everything, in real time.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+      <!-- Connecting lines on desktop -->
+      <div class="hidden md:block absolute top-12 left-1/3 right-1/3 h-px z-0"
+        style="background: linear-gradient(90deg, rgba(56,189,248,0.3), rgba(249,115,22,0.3));"></div>
+
+      {steps.map((step) => (
+        <div class="card relative z-10">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+              style={`background: ${step.bgColor}; border: 1px solid ${step.borderColor};`}>
+              {step.icon}
+            </div>
+            <span class="font-heading text-4xl font-extrabold opacity-10 leading-none" style={`color: ${step.color};`}>
+              {step.number}
+            </span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-slate-900 mb-2 mt-4">{step.title}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">{step.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom note -->
+    <div class="mt-10 text-center">
+      <p class="text-sm text-slate-400">
+        Works alongside your existing channels.
+        <a href="/platform/integrations" class="font-medium ml-1" style="color: var(--c360-primary);">
+          See all integrations →
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

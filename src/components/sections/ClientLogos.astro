@@ -1,26 +1,45 @@
 ---
-const logos = [
-  { name: 'Amadeus', src: '/images/logos/amadeus.svg' },
-  { name: 'Sabre', src: '/images/logos/sabre.svg' },
-  { name: 'Travelport', src: '/images/logos/travelport.svg' },
-  { name: 'Duffel', src: '/images/logos/duffel.svg' },
-  { name: 'AirGateway', src: '/images/logos/airgateway.svg' },
+const integrations = [
+  { name: 'Amadeus', type: 'GDS' },
+  { name: 'Sabre', type: 'GDS' },
+  { name: 'Travelport', type: 'GDS' },
+  { name: 'Duffel', type: 'NDC' },
+  { name: 'AirGateway', type: 'NDC' },
+  { name: 'IATA NDC', type: 'NDC' },
+  { name: 'Direct Suppliers', type: 'API' },
+  { name: 'ERP / Finance', type: 'Downstream' },
 ];
+
+const typeColors: Record<string, string> = {
+  GDS: 'rgba(56,189,248,0.15)',
+  NDC: 'rgba(167,139,250,0.15)',
+  API: 'rgba(16,185,129,0.15)',
+  Downstream: 'rgba(249,115,22,0.15)',
+};
+
+const typeText: Record<string, string> = {
+  GDS: '#38bdf8',
+  NDC: '#a78bfa',
+  API: '#10b981',
+  Downstream: '#f97316',
+};
 ---
 
-<section class="py-12 border-y border-slate-100 bg-white">
+<section class="py-14 border-y" style="background: var(--c360-dark); border-color: rgba(255,255,255,0.06);">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-    <p class="text-center text-sm font-medium text-slate-400 uppercase tracking-wider mb-8">
-      Works with the travel ecosystem you already use
+    <p class="text-center text-xs font-semibold uppercase tracking-[0.2em] mb-8"
+      style="color: rgba(248,250,252,0.3);">
+      Native connectivity across the travel ecosystem
     </p>
-    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-      {logos.map((logo) => (
-        <div class="flex items-center justify-center h-8">
-          <img
-            src={logo.src}
-            alt={logo.name}
-            class="h-6 md:h-8 w-auto object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-200"
-          />
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      {integrations.map((item) => (
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
+          style={`background: ${typeColors[item.type]}; border: 1px solid ${typeColors[item.type].replace('0.15', '0.3')};`}>
+          <span style={`color: ${typeText[item.type]};`}>{item.name}</span>
+          <span class="text-xs px-1.5 py-0.5 rounded"
+            style={`background: ${typeColors[item.type].replace('0.15', '0.25')}; color: ${typeText[item.type]}; font-size: 0.65rem; opacity: 0.8;`}>
+            {item.type}
+          </span>
         </div>
       ))}
     </div>

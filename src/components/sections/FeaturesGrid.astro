@@ -3,113 +3,120 @@ const features = [
   {
     icon: '🛡️',
     badge: 'Governance',
-    badgeColor: 'sky',
-    title: 'Policy and Approval Workflows',
+    badgeType: 'primary',
+    title: 'Policy & Approval Workflows',
     description:
-      'Route bookings to the right approvers before spend is committed. Apply rules by entity, team, traveller, cost centre, destination, supplier, fare cap, or exception path — and maintain a full defensible audit trail.',
+      'Route bookings to the right approvers before spend is committed. Apply rules by entity, team, traveller, cost centre, destination, or fare cap — with a full defensible audit trail.',
     bullets: [
-      'Pre-trip approvals',
-      'Cost-centre routing',
+      'Pre-trip approvals enforced at booking',
+      'Configurable approval chains',
       'Out-of-policy exception handling',
-      'Full audit trail',
+      'Audit-grade decision records',
     ],
     href: '/platform/policy-approvals',
-    cta: 'Learn More',
+    cta: 'Policy & Approvals',
   },
   {
     icon: '⚙️',
     badge: 'Automation',
-    badgeColor: 'orange',
-    title: 'TMC Workflows Without the Manual Work',
+    badgeType: 'accent',
+    title: 'TMC Workflow Automation',
     description:
-      'Replace repetitive back-office processes with automated workflows. From client onboarding to booking intake and mid-office operations — Cinturon360 runs the process so your team doesn\'t have to.',
+      'Replace manual mid-office processes with automated workflow logic — from client onboarding to booking intake, quality control, and client notifications.',
     bullets: [
-      'Client onboarding automation',
-      'Booking intake and processing',
+      'Repeatable client onboarding',
+      'Booking intake automation',
       'Mid-office workflow engine',
-      'Configurable rule-based routing',
+      'Scale without extra headcount',
     ],
     href: '/platform/tmc-operations',
-    cta: 'See TMC Operations',
+    cta: 'TMC Operations',
   },
   {
     icon: '📊',
-    badge: 'Reporting',
-    badgeColor: 'emerald',
-    title: 'Finance-Grade Reporting and Visibility',
+    badge: 'Visibility',
+    badgeType: 'emerald',
+    title: 'Finance-Grade Reporting',
     description:
-      'Give travel, finance, procurement, and leadership teams a real-time picture of spend, compliance, exceptions, and operational activity — ready for export, audit, or board review.',
+      'Real-time spend visibility across every booking, approval, and exception — structured for finance teams, client reviews, and board reporting. Not another Excel export.',
     bullets: [
-      'Real-time spend visibility',
-      'Compliance and exception reporting',
-      'CFO-ready data exports',
+      'Real-time spend by segment',
       'Multi-entity consolidation',
+      'Compliance & exception reports',
+      'CFO-ready data exports',
     ],
     href: '/platform/reporting-visibility',
-    cta: 'See Reporting',
+    cta: 'Reporting & Visibility',
   },
 ];
 
-type BadgeColor = 'sky' | 'orange' | 'emerald' | 'purple' | 'slate';
-
-const badgeColorClasses: Record<BadgeColor, string> = {
-  sky: 'bg-sky-100 text-sky-700',
-  orange: 'bg-orange-100 text-orange-700',
-  emerald: 'bg-emerald-100 text-emerald-700',
-  purple: 'bg-purple-100 text-purple-700',
-  slate: 'bg-slate-100 text-slate-600',
-};
-
-const iconBgClasses: Record<BadgeColor, string> = {
-  sky: 'bg-sky-50',
-  orange: 'bg-orange-50',
-  emerald: 'bg-emerald-50',
-  purple: 'bg-purple-50',
-  slate: 'bg-slate-50',
+const badgeStyles: Record<string, { bg: string; text: string; border: string }> = {
+  primary: {
+    bg: 'rgba(56,189,248,0.12)',
+    text: '#38bdf8',
+    border: 'rgba(56,189,248,0.25)',
+  },
+  accent: {
+    bg: 'rgba(249,115,22,0.12)',
+    text: '#f97316',
+    border: 'rgba(249,115,22,0.25)',
+  },
+  emerald: {
+    bg: 'rgba(16,185,129,0.12)',
+    text: '#10b981',
+    border: 'rgba(16,185,129,0.25)',
+  },
 };
 ---
 
-<section class="section bg-slate-50">
+<section class="section" style="background: var(--c360-dark-mid, #0d1424);">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
     <div class="text-center mb-16">
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700 mb-4">
-        Platform capabilities
-      </span>
-      <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-        Governance, automation, and visibility — built as one system
+      <span class="section-badge section-badge-primary">Platform capabilities</span>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-4">
+        Governance, automation, and visibility —<br class="hidden md:block" />
+        <span style="color: var(--c360-primary);">built as one system.</span>
       </h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+      <p class="text-lg max-w-2xl mx-auto leading-relaxed" style="color: rgba(248,250,252,0.55);">
         Not three bolt-on modules. A single platform where policy, workflow automation, and reporting share the same data model — so what gets approved is what gets reported.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {features.map((feature) => {
-        const color = feature.badgeColor as BadgeColor;
+        const style = badgeStyles[feature.badgeType];
         return (
-          <div class="card flex flex-col">
-            <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-xl ${iconBgClasses[color]}`}>
-              {feature.icon}
+          <div class="glass-card flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                style={`background: ${style.bg}; border: 1px solid ${style.border};`}>
+                {feature.icon}
+              </div>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full"
+                style={`background: ${style.bg}; color: ${style.text}; border: 1px solid ${style.border};`}>
+                {feature.badge}
+              </span>
             </div>
-            <span class={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium mb-3 w-fit ${badgeColorClasses[color]}`}>
-              {feature.badge}
-            </span>
-            <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-4">{feature.description}</p>
-            <ul class="space-y-1.5 mb-6 flex-1">
+
+            <h3 class="font-heading text-xl font-bold text-white mb-3">{feature.title}</h3>
+            <p class="text-sm leading-relaxed mb-5 flex-1" style="color: rgba(248,250,252,0.55);">
+              {feature.description}
+            </p>
+
+            <ul class="space-y-2 mb-6">
               {feature.bullets.map((bullet) => (
-                <li class="flex items-center gap-2 text-sm text-slate-600">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0"></span>
+                <li class="flex items-center gap-2 text-sm" style="color: rgba(248,250,252,0.7);">
+                  <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background: ${style.text};`}></span>
                   {bullet}
                 </li>
               ))}
             </ul>
-            <a
-              href={feature.href}
-              class="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700 transition-colors mt-auto"
-            >
+
+            <a href={feature.href}
+              class="inline-flex items-center gap-1.5 text-sm font-semibold mt-auto transition-colors"
+              style={`color: ${style.text};`}>
               {feature.cta}
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </a>
