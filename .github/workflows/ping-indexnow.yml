@@ -1,0 +1,30 @@
+name: Ping IndexNow
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "ping-indexnow-main"
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    name: Run ping-indexnow.sh
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+
+      - name: Make script executable
+        run: chmod +x ./ping-indexnow.sh
+
+      - name: Run script
+        run: ./ping-indexnow.sh

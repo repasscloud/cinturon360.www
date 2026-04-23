@@ -1,6 +1,8 @@
 {
   "name": "cinturon360-www",
   "compatibility_date": "2026-04-22",
+  "workers_dev": false,
+  "preview_urls": false,
   "assets": {
     "directory": "./dist"
   }

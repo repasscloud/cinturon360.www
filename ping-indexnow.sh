@@ -8,7 +8,14 @@ KEY_URL="https://cinturon360.com/${KEY}.txt"
 URL_LIST_FILE="./indexnow-urls.txt"
 JSON_FILE="./indexnow-payload.json"
 
-curl -fsSL "$SITEMAP_URL" \
+fetch() {
+  curl --retry 5 \
+       --retry-delay 2 \
+       --retry-all-errors \
+       -fsSL "$1"
+}
+
+fetch "$SITEMAP_URL" \
   | grep -oE '<loc>[^<]+</loc>' \
   | sed -E 's#</?loc>##g' \
   > "$URL_LIST_FILE"
@@ -19,7 +26,7 @@ if [ ! -s "$URL_LIST_FILE" ]; then
 fi
 
 echo "Waiting for key file to become available: $KEY_URL"
-until curl -fsSL "$KEY_URL" | tr -d '\r\n' | grep -Fxq "$KEY"; do
+until fetch "$KEY_URL" | tr -d '\r\n' | grep -Fxq "$KEY"; do
   echo "Key file not ready yet. Sleeping 30 seconds..."
   sleep 30
 done
@@ -44,10 +51,13 @@ cat > "$JSON_FILE" <<EOF
 }
 EOF
 
-curl -fsS \
-  -X POST "https://api.indexnow.org/IndexNow" \
-  -H "Content-Type: application/json; charset=utf-8" \
-  --data @"$JSON_FILE"
+curl --retry 5 \
+     --retry-delay 2 \
+     --retry-all-errors \
+     -fsS \
+     -X POST "https://api.indexnow.org/IndexNow" \
+     -H "Content-Type: application/json; charset=utf-8" \
+     --data @"$JSON_FILE"
 
 echo
 echo "Submitted IndexNow payload successfully."
